@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>TheraWorks | Data Entry Specialist</title>
+  <meta name="description" content="TheraWorks provides professional data entry support for businesses seeking accuracy, structure, and peace of mind. Led by Thera, with 10+ years of experience.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Font -->
+  <!-- SEO -->
+  <meta name="keywords" content="data entry specialist, data entry services Indonesia, freelance data entry, virtual assistant data entry">
+  <meta name="author" content="TheraWorks">
+
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
@@ -13,17 +18,17 @@
       margin: 0;
       font-family: 'Inter', sans-serif;
       background: #f7f9f8;
-      color: #333;
-      line-height: 1.6;
+      color: #2f2f2f;
+      line-height: 1.7;
     }
 
     h1, h2, h3 {
-      color: #4f6f64;
+      color: #425f55;
       font-weight: 500;
     }
 
     section {
-      padding: 70px 20px;
+      padding: 80px 20px;
     }
 
     .container {
@@ -33,37 +38,44 @@
 
     /* HERO */
     .hero {
-      background: linear-gradient(135deg, #e8f1ee, #f7f9f8);
+      background: linear-gradient(135deg, #e4efeb, #f7f9f8);
       text-align: center;
-      padding: 90px 20px;
+      padding: 100px 20px;
     }
 
-    .hero img {
-      width: 120px;
-      height: 120px;
+    .profile-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .profile-wrapper img {
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 20px;
+      border: 4px solid #ffffff;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
     }
 
     .hero h1 {
-      font-size: 34px;
-      margin-bottom: 10px;
+      font-size: 36px;
+      margin-bottom: 12px;
     }
 
     .hero p {
-      font-size: 16px;
-      max-width: 600px;
+      font-size: 17px;
+      max-width: 680px;
       margin: auto;
-      color: #555;
+      color: #4a4a4a;
     }
 
     /* ABOUT */
     .about p {
-      max-width: 750px;
+      max-width: 780px;
       margin: auto;
-      font-size: 15px;
-      color: #555;
+      font-size: 16px;
+      color: #4f4f4f;
     }
 
     /* PRICING */
@@ -74,27 +86,27 @@
     .pricing-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
+      gap: 32px;
+      margin-top: 50px;
     }
 
     .pricing-card {
-      background: #fff;
-      padding: 40px 30px;
-      border-radius: 22px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+      background: #ffffff;
+      padding: 42px 34px;
+      border-radius: 24px;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.08);
       text-align: left;
     }
 
     .pricing-card.featured {
-      border: 2px solid #4f6f64;
+      border: 2px solid #425f55;
       transform: translateY(-6px);
     }
 
     .price {
       font-size: 22px;
       font-weight: 600;
-      margin: 15px 0;
+      margin: 18px 0;
     }
 
     ul {
@@ -102,12 +114,12 @@
     }
 
     ul li {
-      font-size: 14px;
-      margin-bottom: 8px;
+      font-size: 14.5px;
+      margin-bottom: 10px;
     }
 
     .note {
-      font-size: 13px;
+      font-size: 13.5px;
       color: #777;
     }
 
@@ -119,101 +131,97 @@
 
     input, textarea {
       width: 100%;
-      padding: 12px;
-      margin-bottom: 14px;
-      border-radius: 10px;
+      padding: 13px;
+      margin-bottom: 16px;
+      border-radius: 12px;
       border: 1px solid #ccc;
       font-family: inherit;
     }
 
     button {
-      background: #4f6f64;
+      background: #425f55;
       color: white;
       border: none;
-      padding: 12px 24px;
-      border-radius: 25px;
+      padding: 13px 28px;
+      border-radius: 28px;
       cursor: pointer;
       font-size: 14px;
     }
 
-    /* WhatsApp Floating */
+    /* WHATSAPP FLOAT */
     .wa-float {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: white;
-      padding: 14px 18px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-size: 14px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
-
-    /* Client Modal */
-    #client-modal {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.55);
+      bottom: 22px;
+      right: 22px;
+      width: 56px;
+      height: 56px;
+      background: #25D366;
+      border-radius: 50%;
       display: flex;
-      justify-content: center;
       align-items: center;
-      z-index: 9999;
+      justify-content: center;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+      z-index: 999;
     }
 
-    .client-box {
-      background: white;
-      padding: 35px;
-      border-radius: 18px;
-      max-width: 360px;
-      text-align: center;
+    .wa-float svg {
+      width: 26px;
+      height: 26px;
+      fill: white;
     }
 
-    .client-box button {
-      width: 100%;
-      margin-top: 10px;
-    }
-
-    /* Mobile */
+    /* MOBILE */
     @media (max-width: 600px) {
       .hero h1 { font-size: 28px; }
-      .hero p { font-size: 15px; }
+      .hero p { font-size: 15.5px; }
     }
   </style>
 </head>
 
 <body>
 
-<!-- CLIENT TYPE MODAL -->
-<div id="client-modal">
-  <div class="client-box">
-    <h3>Welcome to TheraWorks</h3>
-    <p>Please select your client type to view relevant pricing.</p>
-    <button onclick="setClientType('indonesia')">🇮🇩 Indonesia-based Client</button>
-    <button onclick="setClientType('international')">🌍 International Client</button>
-  </div>
-</div>
-
 <!-- HERO -->
 <section class="hero">
-  <img src="https://via.placeholder.com/150" alt="Thera Profile">
+  <div class="profile-wrapper">
+    <!-- GANTI FOTO DI SINI -->
+    <img src="https://raw.githubusercontent.com/USERNAME/REPO/main/profile.jpg" alt="Thera - Data Entry Specialist">
+  </div>
+
   <h1>TheraWorks</h1>
-  <p>
-    Hi, I’m Theresia — you can call me <strong>Thera</strong>.
-    I help businesses stay organized by handling their data accurately,
-    consistently, and with care.
+
+  <p data-en>
+    Hi, I’m Theresia — you can call me <strong>Thera</strong>.  
+    I provide structured and reliable data entry support for businesses
+    that value accuracy, clarity, and long-term consistency.
+  </p>
+
+  <p data-id style="display:none;">
+    Halo, saya Theresia — panggil saja <strong>Thera</strong>.  
+    Saya membantu bisnis menangani data secara rapi, akurat,
+    dan konsisten agar Anda bisa fokus pada pengembangan usaha.
   </p>
 </section>
 
 <!-- ABOUT -->
 <section class="about">
   <div class="container">
-    <h2>About Thera</h2>
-    <p>
-      I’m a solo freelancer with over <strong>10 years of professional experience</strong>
-      supporting businesses through structured data entry and organization.
-      TheraWorks was created to help business owners focus on growth,
-      while I take care of the details behind the scenes.
+    <h2 data-en>About Thera</h2>
+    <h2 data-id style="display:none;">Tentang Thera</h2>
+
+    <p data-en>
+      With over <strong>10 years of professional experience</strong>,
+      I support business owners by handling their data with care,
+      discretion, and attention to detail.
+      TheraWorks was built for those who prefer calm, dependable support
+      rather than transactional freelance work.
+    </p>
+
+    <p data-id style="display:none;">
+      Dengan pengalaman profesional lebih dari <strong>10 tahun</strong>,
+      saya membantu pemilik bisnis mengelola data secara rapi,
+      teliti, dan berkelanjutan.
+      TheraWorks hadir untuk Anda yang membutuhkan dukungan
+      yang tenang, konsisten, dan dapat diandalkan.
     </p>
   </div>
 </section>
@@ -221,21 +229,20 @@
 <!-- PRICING -->
 <section class="pricing-section">
   <div class="container">
-    <h2>Data Entry Support Packages</h2>
-    <p class="note">Monthly support designed for clarity, consistency, and peace of mind.</p>
+    <h2 data-en>Data Entry Support Packages</h2>
+    <h2 data-id style="display:none;">Paket Layanan Data Entry</h2>
 
-    <!-- INDONESIA -->
-    <div class="pricing-grid pricing indonesia">
+    <div class="pricing-grid">
       <div class="pricing-card">
         <h3>Starter</h3>
         <p class="price">IDR 2.500.000 / month</p>
         <ul>
-          <li>Data entry from documents or images</li>
-          <li>Spreadsheet updates & formatting</li>
-          <li>Basic validation & cleanup</li>
+          <li>Data entry & basic cleanup</li>
+          <li>Spreadsheet updates</li>
           <li>Up to 40 hours / month</li>
         </ul>
-        <p class="note">For light to moderate workloads.</p>
+        <p class="note" data-en>Suitable for light to moderate workloads.</p>
+        <p class="note" data-id style="display:none;">Cocok untuk kebutuhan ringan hingga menengah.</p>
       </div>
 
       <div class="pricing-card featured">
@@ -243,28 +250,13 @@
         <p class="price">IDR 5.000.000 / month</p>
         <ul>
           <li>Everything in Starter</li>
-          <li>Higher data volume</li>
-          <li>Weekly structured updates</li>
+          <li>Higher data volume & consistency</li>
           <li>Up to 80 hours / month</li>
         </ul>
-        <p class="note">For growing businesses.</p>
+        <p class="note" data-en>Ideal for growing businesses.</p>
+        <p class="note" data-id style="display:none;">Ideal untuk bisnis yang sedang berkembang.</p>
       </div>
     </div>
-
-    <!-- INTERNATIONAL -->
-    <div class="pricing-grid pricing international" style="display:none;">
-      <div class="pricing-card featured">
-        <h3>International Support</h3>
-        <p class="price">USD 8 – 20 / hour</p>
-        <ul>
-          <li>Structured data entry & maintenance</li>
-          <li>Clear documentation</li>
-          <li>Timezone-aware communication</li>
-        </ul>
-        <p class="note">Project or hourly based.</p>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -273,8 +265,8 @@
   <div class="container">
     <h2>Contact</h2>
     <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Email Address" required>
+      <input type="text" placeholder="Name">
+      <input type="email" placeholder="Email">
       <textarea rows="4" placeholder="Tell me about your project"></textarea>
       <button type="submit">Send Message</button>
     </form>
@@ -282,21 +274,17 @@
 </section>
 
 <!-- WHATSAPP -->
-<a class="wa-float" href="https://wa.me/62XXXXXXXXXX" target="_blank">
-  WhatsApp Thera
+<a class="wa-float" href="https://wa.me/62XXXXXXXXXX" target="_blank" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32">
+    <path d="M16 2.9c-7.2 0-13 5.8-13 13 0 2.3.6 4.6 1.8 6.6L3 29l6.7-1.8c1.9 1 4.1 1.6 6.3 1.6 7.2 0 13-5.8 13-13s-5.8-13-13-13z"/>
+  </svg>
 </a>
 
 <script>
-  function setClientType(type) {
-    localStorage.setItem('clientType', type);
-    document.getElementById('client-modal').style.display = 'none';
-    document.querySelectorAll('.pricing').forEach(p => p.style.display = 'none');
-    document.querySelector('.pricing.' + type).style.display = 'grid';
-  }
-
-  window.onload = function () {
-    const type = localStorage.getItem('clientType');
-    if (type) setClientType(type);
+  const userLang = navigator.language || navigator.userLanguage;
+  if (userLang.startsWith('id')) {
+    document.querySelectorAll('[data-en]').forEach(el => el.style.display = 'none');
+    document.querySelectorAll('[data-id]').forEach(el => el.style.display = 'block');
   }
 </script>
 
