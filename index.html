@@ -1,292 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>TheraWorks | Data Entry Specialist</title>
-  <meta name="description" content="TheraWorks provides professional data entry support for businesses seeking accuracy, structure, and peace of mind. Led by Thera, with 10+ years of experience.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<title>TheraWorks | Digital Support by Thera</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO -->
-  <meta name="keywords" content="data entry specialist, data entry services Indonesia, freelance data entry, virtual assistant data entry">
-  <meta name="author" content="TheraWorks">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f7f8f6;
+  color: #333;
+  line-height: 1.7;
+}
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #f7f9f8;
-      color: #2f2f2f;
-      line-height: 1.7;
-    }
+header {
+  background: linear-gradient(135deg, #7fa99b, #4f6f64);
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
 
-    h1, h2, h3 {
-      color: #425f55;
-      font-weight: 500;
-    }
+header h1 {
+  font-size: 36px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
 
-    section {
-      padding: 80px 20px;
-    }
+header p {
+  font-size: 15px;
+  max-width: 720px;
+  margin: auto;
+}
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-    }
+section {
+  max-width: 920px;
+  margin: auto;
+  padding: 60px 20px;
+}
 
-    /* HERO */
-    .hero {
-      background: linear-gradient(135deg, #e4efeb, #f7f9f8);
-      text-align: center;
-      padding: 100px 20px;
-    }
+h2 {
+  color: #4f6f64;
+  margin-bottom: 20px;
+}
 
-    .profile-wrapper {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 24px;
-    }
+.card {
+  background: #fff;
+  padding: 36px;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.05);
+  margin-bottom: 45px;
+}
 
-    .profile-wrapper img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #ffffff;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-    }
+/* Profile */
+.profile {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
-    .hero h1 {
-      font-size: 36px;
-      margin-bottom: 12px;
-    }
+.profile img {
+  width: 150px;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
 
-    .hero p {
-      font-size: 17px;
-      max-width: 680px;
-      margin: auto;
-      color: #4a4a4a;
-    }
+/* Portfolio */
+.portfolio-item {
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #e0e0e0;
+}
 
-    /* ABOUT */
-    .about p {
-      max-width: 780px;
-      margin: auto;
-      font-size: 16px;
-      color: #4f4f4f;
-    }
+.portfolio-item:last-child {
+  border-bottom: none;
+}
 
-    /* PRICING */
-    .pricing-section {
-      text-align: center;
-    }
+/* Form */
+input, textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+}
 
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 32px;
-      margin-top: 50px;
-    }
+button {
+  background: #4f6f64;
+  color: #fff;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+}
 
-    .pricing-card {
-      background: #ffffff;
-      padding: 42px 34px;
-      border-radius: 24px;
-      box-shadow: 0 18px 45px rgba(0,0,0,0.08);
-      text-align: left;
-    }
+/* Footer */
+footer {
+  background: #354f52;
+  color: #fff;
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+}
 
-    .pricing-card.featured {
-      border: 2px solid #425f55;
-      transform: translateY(-6px);
-    }
+/* WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  bottom: 25px;
+  right: 25px;
+  background: #25d366;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 28px;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 999;
+}
 
-    .price {
-      font-size: 22px;
-      font-weight: 600;
-      margin: 18px 0;
-    }
+.whatsapp-float span {
+  line-height: 55px;
+}
 
-    ul {
-      padding-left: 18px;
-    }
+/* Client Modal */
+#client-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
 
-    ul li {
-      font-size: 14.5px;
-      margin-bottom: 10px;
-    }
+.client-box {
+  background: #fff;
+  padding: 38px;
+  border-radius: 18px;
+  text-align: center;
+  max-width: 360px;
+  width: 90%;
+}
 
-    .note {
-      font-size: 13.5px;
-      color: #777;
-    }
+.client-box h3 {
+  color: #4f6f64;
+}
 
-    /* CONTACT */
-    form {
-      max-width: 600px;
-      margin: auto;
-    }
+.client-box p {
+  font-size: 14px;
+  margin-bottom: 22px;
+}
 
-    input, textarea {
-      width: 100%;
-      padding: 13px;
-      margin-bottom: 16px;
-      border-radius: 12px;
-      border: 1px solid #ccc;
-      font-family: inherit;
-    }
+.client-box button {
+  width: 100%;
+  margin: 8px 0;
+}
 
-    button {
-      background: #425f55;
-      color: white;
-      border: none;
-      padding: 13px 28px;
-      border-radius: 28px;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    /* WHATSAPP FLOAT */
-    .wa-float {
-      position: fixed;
-      bottom: 22px;
-      right: 22px;
-      width: 56px;
-      height: 56px;
-      background: #25D366;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-      z-index: 999;
-    }
-
-    .wa-float svg {
-      width: 26px;
-      height: 26px;
-      fill: white;
-    }
-
-    /* MOBILE */
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 28px; }
-      .hero p { font-size: 15.5px; }
-    }
-  </style>
+/* Mobile */
+@media (max-width: 768px) {
+  header h1 { font-size: 28px; }
+  header p { font-size: 14px; }
+  .profile { text-align: center; justify-content: center; }
+}
+</style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="profile-wrapper">
-    <!-- GANTI FOTO DI SINI -->
-    <img src="https://raw.githubusercontent.com/USERNAME/REPO/main/profile.jpg" alt="Thera - Data Entry Specialist">
+<!-- CLIENT TYPE POPUP -->
+<div id="client-modal">
+  <div class="client-box">
+    <h3>Welcome to TheraWorks</h3>
+    <p>To better tailor my services and pricing,<br>please select your client type.</p>
+    <button onclick="setClientType('indonesia')">🇮🇩 Indonesia-based Client</button>
+    <button onclick="setClientType('international')">🌍 International Client</button>
   </div>
+</div>
 
+<header>
   <h1>TheraWorks</h1>
+  <p>Calm, reliable digital support — handled personally.</p>
+</header>
 
-  <p data-en>
-    Hi, I’m Theresia — you can call me <strong>Thera</strong>.  
-    I provide structured and reliable data entry support for businesses
-    that value accuracy, clarity, and long-term consistency.
-  </p>
+<section>
 
-  <p data-id style="display:none;">
-    Halo, saya Theresia — panggil saja <strong>Thera</strong>.  
-    Saya membantu bisnis menangani data secara rapi, akurat,
-    dan konsisten agar Anda bisa fokus pada pengembangan usaha.
-  </p>
-</section>
-
-<!-- ABOUT -->
-<section class="about">
-  <div class="container">
-    <h2 data-en>About Thera</h2>
-    <h2 data-id style="display:none;">Tentang Thera</h2>
-
-    <p data-en>
-      With over <strong>10 years of professional experience</strong>,
-      I support business owners by handling their data with care,
-      discretion, and attention to detail.
-      TheraWorks was built for those who prefer calm, dependable support
-      rather than transactional freelance work.
+<div class="card profile">
+  <img src="profile.jpg" alt="Theresia - TheraWorks">
+  <div>
+    <h2>Meet Thera</h2>
+    <p>
+      Hi, I’m <strong>Theresia</strong> — you can call me <strong>Thera</strong>.
+      I’m the person behind <strong>TheraWorks</strong>.
     </p>
-
-    <p data-id style="display:none;">
-      Dengan pengalaman profesional lebih dari <strong>10 tahun</strong>,
-      saya membantu pemilik bisnis mengelola data secara rapi,
-      teliti, dan berkelanjutan.
-      TheraWorks hadir untuk Anda yang membutuhkan dukungan
-      yang tenang, konsisten, dan dapat diandalkan.
+    <p>
+      With over 10 years of professional experience, I support business owners by handling
+      data organization, administrative tasks, and daily digital work — so they can focus
+      on growing their business.
+    </p>
+    <p>
+      I work personally on every project with care, confidentiality, and clear communication.
     </p>
   </div>
-</section>
+</div>
+
+<div class="card">
+  <h2>Services</h2>
+  <ul>
+    <li>Data Entry & Spreadsheet Organization</li>
+    <li>PDF to Excel / Word Conversion</li>
+    <li>Data Cleaning & Formatting</li>
+    <li>Web Research</li>
+    <li>Administrative & Digital Support</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>Selected Work</h2>
+  <div class="portfolio-item"><strong>Spreadsheet Data Cleanup</strong><br>Standardized datasets for reporting.</div>
+  <div class="portfolio-item"><strong>PDF to Excel Conversion</strong><br>Converted documents into editable files.</div>
+  <div class="portfolio-item"><strong>Ongoing Admin Support</strong><br>Weekly task assistance for business owners.</div>
+</div>
 
 <!-- PRICING -->
-<section class="pricing-section">
-  <div class="container">
-    <h2 data-en>Data Entry Support Packages</h2>
-    <h2 data-id style="display:none;">Paket Layanan Data Entry</h2>
+<div class="card pricing indonesia">
+  <h2>Pricing — Indonesia-based Clients</h2>
+  <p>Services tailored to local workflows and business needs.</p>
+  <p><strong>Estimated range:</strong><br>IDR 50.000 – 150.000 / task or hour</p>
+</div>
 
-    <div class="pricing-grid">
-      <div class="pricing-card">
-        <h3>Starter</h3>
-        <p class="price">IDR 2.500.000 / month</p>
-        <ul>
-          <li>Data entry & basic cleanup</li>
-          <li>Spreadsheet updates</li>
-          <li>Up to 40 hours / month</li>
-        </ul>
-        <p class="note" data-en>Suitable for light to moderate workloads.</p>
-        <p class="note" data-id style="display:none;">Cocok untuk kebutuhan ringan hingga menengah.</p>
-      </div>
+<div class="card pricing international" style="display:none;">
+  <h2>Pricing — International Clients</h2>
+  <p>Services follow international standards, timelines, and documentation.</p>
+  <p><strong>Estimated range:</strong><br>USD 8 – 20 / hour or project-based</p>
+</div>
 
-      <div class="pricing-card featured">
-        <h3>Professional</h3>
-        <p class="price">IDR 5.000.000 / month</p>
-        <ul>
-          <li>Everything in Starter</li>
-          <li>Higher data volume & consistency</li>
-          <li>Up to 80 hours / month</li>
-        </ul>
-        <p class="note" data-en>Ideal for growing businesses.</p>
-        <p class="note" data-id style="display:none;">Ideal untuk bisnis yang sedang berkembang.</p>
-      </div>
-    </div>
-  </div>
+<div class="card">
+  <h2>Contact</h2>
+  <p>If you’re looking for calm, reliable support, let’s talk.</p>
+  <form action="mailto:yourname@email.com" method="post" enctype="text/plain">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Tell me about your project"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+
 </section>
 
-<!-- CONTACT -->
-<section>
-  <div class="container">
-    <h2>Contact</h2>
-    <form>
-      <input type="text" placeholder="Name">
-      <input type="email" placeholder="Email">
-      <textarea rows="4" placeholder="Tell me about your project"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-</section>
+<footer>
+© 2026 TheraWorks — Digital Support by Thera
+</footer>
 
-<!-- WHATSAPP -->
-<a class="wa-float" href="https://wa.me/62XXXXXXXXXX" target="_blank" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 32 32">
-    <path d="M16 2.9c-7.2 0-13 5.8-13 13 0 2.3.6 4.6 1.8 6.6L3 29l6.7-1.8c1.9 1 4.1 1.6 6.3 1.6 7.2 0 13-5.8 13-13s-5.8-13-13-13z"/>
-  </svg>
+<a href="https://wa.me/62XXXXXXXXXX" class="whatsapp-float" target="_blank">
+  <span>💬</span>
 </a>
 
 <script>
-  const userLang = navigator.language || navigator.userLanguage;
-  if (userLang.startsWith('id')) {
-    document.querySelectorAll('[data-en]').forEach(el => el.style.display = 'none');
-    document.querySelectorAll('[data-id]').forEach(el => el.style.display = 'block');
+function setClientType(type) {
+  localStorage.setItem('clientType', type);
+  document.getElementById('client-modal').style.display = 'none';
+  updatePricing(type);
+}
+
+function updatePricing(type) {
+  document.querySelectorAll('.pricing').forEach(p => p.style.display = 'none');
+  const active = document.querySelector('.pricing.' + type);
+  if (active) active.style.display = 'block';
+}
+
+window.onload = function () {
+  const saved = localStorage.getItem('clientType');
+  if (saved) {
+    document.getElementById('client-modal').style.display = 'none';
+    updatePricing(saved);
   }
+};
 </script>
 
 </body>
 </html>
+
