@@ -1,287 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>TheraWorks | Digital Support by Thera</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TheraWorks | Data Entry Specialist</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<style>
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #f7f8f6;
-  color: #333;
-  line-height: 1.7;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f7f9f8;
+      color: #333;
+      line-height: 1.6;
+    }
 
-header {
-  background: linear-gradient(135deg, #7fa99b, #4f6f64);
-  color: #fff;
-  text-align: center;
-  padding: 80px 20px;
-}
+    h1, h2, h3 {
+      color: #4f6f64;
+      font-weight: 500;
+    }
 
-header h1 {
-  font-size: 36px;
-  margin-bottom: 8px;
-  font-weight: 600;
-}
+    section {
+      padding: 70px 20px;
+    }
 
-header p {
-  font-size: 15px;
-  max-width: 720px;
-  margin: auto;
-}
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
 
-section {
-  max-width: 920px;
-  margin: auto;
-  padding: 60px 20px;
-}
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #e8f1ee, #f7f9f8);
+      text-align: center;
+      padding: 90px 20px;
+    }
 
-h2 {
-  color: #4f6f64;
-  margin-bottom: 20px;
-}
+    .hero img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
 
-.card {
-  background: #fff;
-  padding: 36px;
-  border-radius: 16px;
-  box-shadow: 0 12px 35px rgba(0,0,0,0.05);
-  margin-bottom: 45px;
-}
+    .hero h1 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
 
-/* Profile */
-.profile {
-  display: flex;
-  gap: 30px;
-  align-items: center;
-  flex-wrap: wrap;
-}
+    .hero p {
+      font-size: 16px;
+      max-width: 600px;
+      margin: auto;
+      color: #555;
+    }
 
-.profile img {
-  width: 150px;
-  border-radius: 50%;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
+    /* ABOUT */
+    .about p {
+      max-width: 750px;
+      margin: auto;
+      font-size: 15px;
+      color: #555;
+    }
 
-/* Portfolio */
-.portfolio-item {
-  margin-bottom: 18px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid #e0e0e0;
-}
+    /* PRICING */
+    .pricing-section {
+      text-align: center;
+    }
 
-.portfolio-item:last-child {
-  border-bottom: none;
-}
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
 
-/* Form */
-input, textarea {
-  width: 100%;
-  padding: 14px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  font-family: 'Poppins', sans-serif;
-}
+    .pricing-card {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 22px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+      text-align: left;
+    }
 
-button {
-  background: #4f6f64;
-  color: #fff;
-  border: none;
-  padding: 14px 32px;
-  border-radius: 30px;
-  font-size: 14px;
-  cursor: pointer;
-}
+    .pricing-card.featured {
+      border: 2px solid #4f6f64;
+      transform: translateY(-6px);
+    }
 
-/* Footer */
-footer {
-  background: #354f52;
-  color: #fff;
-  text-align: center;
-  padding: 25px;
-  font-size: 14px;
-}
+    .price {
+      font-size: 22px;
+      font-weight: 600;
+      margin: 15px 0;
+    }
 
-/* WhatsApp */
-.whatsapp-float {
-  position: fixed;
-  width: 55px;
-  height: 55px;
-  bottom: 25px;
-  right: 25px;
-  background: #25d366;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 28px;
-  color: #fff;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  z-index: 999;
-}
+    ul {
+      padding-left: 18px;
+    }
 
-.whatsapp-float span {
-  line-height: 55px;
-}
+    ul li {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
 
-/* Client Modal */
-#client-modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.55);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
+    .note {
+      font-size: 13px;
+      color: #777;
+    }
 
-.client-box {
-  background: #fff;
-  padding: 38px;
-  border-radius: 18px;
-  text-align: center;
-  max-width: 360px;
-  width: 90%;
-}
+    /* CONTACT */
+    form {
+      max-width: 600px;
+      margin: auto;
+    }
 
-.client-box h3 {
-  color: #4f6f64;
-}
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 14px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+    }
 
-.client-box p {
-  font-size: 14px;
-  margin-bottom: 22px;
-}
+    button {
+      background: #4f6f64;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 14px;
+    }
 
-.client-box button {
-  width: 100%;
-  margin: 8px 0;
-}
+    /* WhatsApp Floating */
+    .wa-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 14px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
 
-/* Mobile */
-@media (max-width: 768px) {
-  header h1 { font-size: 28px; }
-  header p { font-size: 14px; }
-  .profile { text-align: center; justify-content: center; }
-}
-</style>
+    /* Client Modal */
+    #client-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .client-box {
+      background: white;
+      padding: 35px;
+      border-radius: 18px;
+      max-width: 360px;
+      text-align: center;
+    }
+
+    .client-box button {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 28px; }
+      .hero p { font-size: 15px; }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- CLIENT TYPE POPUP -->
+<!-- CLIENT TYPE MODAL -->
 <div id="client-modal">
   <div class="client-box">
     <h3>Welcome to TheraWorks</h3>
-    <p>To better tailor my services and pricing,<br>please select your client type.</p>
+    <p>Please select your client type to view relevant pricing.</p>
     <button onclick="setClientType('indonesia')">🇮🇩 Indonesia-based Client</button>
     <button onclick="setClientType('international')">🌍 International Client</button>
   </div>
 </div>
 
-<header>
+<!-- HERO -->
+<section class="hero">
+  <img src="https://via.placeholder.com/150" alt="Thera Profile">
   <h1>TheraWorks</h1>
-  <p>Calm, reliable digital support — handled personally.</p>
-</header>
-
-<section>
-
-<div class="card profile">
-  <img src="profile.jpg" alt="Theresia - TheraWorks">
-  <div>
-    <h2>Meet Thera</h2>
-    <p>
-      Hi, I’m <strong>Theresia</strong> — you can call me <strong>Thera</strong>.
-      I’m the person behind <strong>TheraWorks</strong>.
-    </p>
-    <p>
-      With over 10 years of professional experience, I support business owners by handling
-      data organization, administrative tasks, and daily digital work — so they can focus
-      on growing their business.
-    </p>
-    <p>
-      I work personally on every project with care, confidentiality, and clear communication.
-    </p>
-  </div>
-</div>
-
-<div class="card">
-  <h2>Services</h2>
-  <ul>
-    <li>Data Entry & Spreadsheet Organization</li>
-    <li>PDF to Excel / Word Conversion</li>
-    <li>Data Cleaning & Formatting</li>
-    <li>Web Research</li>
-    <li>Administrative & Digital Support</li>
-  </ul>
-</div>
-
-<div class="card">
-  <h2>Selected Work</h2>
-  <div class="portfolio-item"><strong>Spreadsheet Data Cleanup</strong><br>Standardized datasets for reporting.</div>
-  <div class="portfolio-item"><strong>PDF to Excel Conversion</strong><br>Converted documents into editable files.</div>
-  <div class="portfolio-item"><strong>Ongoing Admin Support</strong><br>Weekly task assistance for business owners.</div>
-</div>
-
-<!-- PRICING -->
-<div class="card pricing indonesia">
-  <h2>Pricing — Indonesia-based Clients</h2>
-  <p>Services tailored to local workflows and business needs.</p>
-  <p><strong>Estimated range:</strong><br>IDR 50.000 – 150.000 / task or hour</p>
-</div>
-
-<div class="card pricing international" style="display:none;">
-  <h2>Pricing — International Clients</h2>
-  <p>Services follow international standards, timelines, and documentation.</p>
-  <p><strong>Estimated range:</strong><br>USD 8 – 20 / hour or project-based</p>
-</div>
-
-<div class="card">
-  <h2>Contact</h2>
-  <p>If you’re looking for calm, reliable support, let’s talk.</p>
-  <form action="mailto:yourname@email.com" method="post" enctype="text/plain">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" rows="5" placeholder="Tell me about your project"></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</div>
-
+  <p>
+    Hi, I’m Theresia — you can call me <strong>Thera</strong>.
+    I help businesses stay organized by handling their data accurately,
+    consistently, and with care.
+  </p>
 </section>
 
-<footer>
-© 2026 TheraWorks — Digital Support by Thera
-</footer>
+<!-- ABOUT -->
+<section class="about">
+  <div class="container">
+    <h2>About Thera</h2>
+    <p>
+      I’m a solo freelancer with over <strong>10 years of professional experience</strong>
+      supporting businesses through structured data entry and organization.
+      TheraWorks was created to help business owners focus on growth,
+      while I take care of the details behind the scenes.
+    </p>
+  </div>
+</section>
 
-<a href="https://wa.me/62XXXXXXXXXX" class="whatsapp-float" target="_blank">
-  <span>💬</span>
+<!-- PRICING -->
+<section class="pricing-section">
+  <div class="container">
+    <h2>Data Entry Support Packages</h2>
+    <p class="note">Monthly support designed for clarity, consistency, and peace of mind.</p>
+
+    <!-- INDONESIA -->
+    <div class="pricing-grid pricing indonesia">
+      <div class="pricing-card">
+        <h3>Starter</h3>
+        <p class="price">IDR 2.500.000 / month</p>
+        <ul>
+          <li>Data entry from documents or images</li>
+          <li>Spreadsheet updates & formatting</li>
+          <li>Basic validation & cleanup</li>
+          <li>Up to 40 hours / month</li>
+        </ul>
+        <p class="note">For light to moderate workloads.</p>
+      </div>
+
+      <div class="pricing-card featured">
+        <h3>Professional</h3>
+        <p class="price">IDR 5.000.000 / month</p>
+        <ul>
+          <li>Everything in Starter</li>
+          <li>Higher data volume</li>
+          <li>Weekly structured updates</li>
+          <li>Up to 80 hours / month</li>
+        </ul>
+        <p class="note">For growing businesses.</p>
+      </div>
+    </div>
+
+    <!-- INTERNATIONAL -->
+    <div class="pricing-grid pricing international" style="display:none;">
+      <div class="pricing-card featured">
+        <h3>International Support</h3>
+        <p class="price">USD 8 – 20 / hour</p>
+        <ul>
+          <li>Structured data entry & maintenance</li>
+          <li>Clear documentation</li>
+          <li>Timezone-aware communication</li>
+        </ul>
+        <p class="note">Project or hourly based.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section>
+  <div class="container">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <textarea rows="4" placeholder="Tell me about your project"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- WHATSAPP -->
+<a class="wa-float" href="https://wa.me/62XXXXXXXXXX" target="_blank">
+  WhatsApp Thera
 </a>
 
 <script>
-function setClientType(type) {
-  localStorage.setItem('clientType', type);
-  document.getElementById('client-modal').style.display = 'none';
-  updatePricing(type);
-}
-
-function updatePricing(type) {
-  document.querySelectorAll('.pricing').forEach(p => p.style.display = 'none');
-  const active = document.querySelector('.pricing.' + type);
-  if (active) active.style.display = 'block';
-}
-
-window.onload = function () {
-  const saved = localStorage.getItem('clientType');
-  if (saved) {
+  function setClientType(type) {
+    localStorage.setItem('clientType', type);
     document.getElementById('client-modal').style.display = 'none';
-    updatePricing(saved);
+    document.querySelectorAll('.pricing').forEach(p => p.style.display = 'none');
+    document.querySelector('.pricing.' + type).style.display = 'grid';
   }
-};
+
+  window.onload = function () {
+    const type = localStorage.getItem('clientType');
+    if (type) setClientType(type);
+  }
 </script>
 
 </body>
