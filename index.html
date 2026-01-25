@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>TheraWorks | Digital Support Freelancer</title>
+  <title>TheraWorks | Digital Support by Thera</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Google Font -->
@@ -12,64 +12,77 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: #f8f9f7;
+      background: #f7f8f6;
       color: #333;
       line-height: 1.7;
     }
 
     header {
-      background: linear-gradient(135deg, #84a98c, #52796f);
+      background: linear-gradient(135deg, #7fa99b, #4f6f64);
       color: #fff;
       text-align: center;
       padding: 90px 20px;
     }
 
     header h1 {
-      font-size: 42px;
-      margin-bottom: 12px;
+      font-size: 40px;
+      margin-bottom: 10px;
       font-weight: 600;
     }
 
     header p {
-      font-size: 18px;
+      font-size: 17px;
       max-width: 720px;
       margin: auto;
+      opacity: 0.95;
     }
 
     section {
-      max-width: 900px;
+      max-width: 920px;
       margin: auto;
       padding: 70px 20px;
     }
 
     h2 {
-      color: #52796f;
+      color: #4f6f64;
       font-weight: 600;
       margin-bottom: 20px;
     }
 
     .card {
       background: #ffffff;
-      padding: 35px;
-      border-radius: 14px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-      margin-bottom: 40px;
+      padding: 38px;
+      border-radius: 16px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.05);
+      margin-bottom: 45px;
     }
 
-    ul, ol {
-      padding-left: 20px;
+    /* Profile */
+    .profile {
+      display: flex;
+      gap: 35px;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
-    li {
-      margin-bottom: 10px;
+    .profile img {
+      width: 160px;
+      border-radius: 50%;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
 
-    .cta {
-      background: #e9f1ec;
-      border-radius: 14px;
-      padding: 40px;
+    /* Portfolio */
+    .portfolio-item {
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #e0e0e0;
     }
 
+    .portfolio-item:last-child {
+      border-bottom: none;
+    }
+
+    /* Form */
     form input, form textarea {
       width: 100%;
       padding: 14px;
@@ -81,17 +94,13 @@
     }
 
     form button {
-      background: #52796f;
+      background: #4f6f64;
       color: #fff;
       border: none;
-      padding: 14px 30px;
+      padding: 14px 32px;
       border-radius: 30px;
       font-size: 15px;
       cursor: pointer;
-    }
-
-    form button:hover {
-      background: #3a5a40;
     }
 
     footer {
@@ -102,7 +111,7 @@
       font-size: 14px;
     }
 
-    /* WhatsApp Floating */
+    /* WhatsApp */
     .whatsapp-float {
       position: fixed;
       width: 55px;
@@ -122,91 +131,116 @@
       line-height: 55px;
     }
 
-    /* Translate Widget */
     #google_translate_element {
       position: fixed;
       top: 15px;
       right: 15px;
       z-index: 200;
     }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 30px;
+      }
+      header p {
+        font-size: 15px;
+      }
+      .profile {
+        text-align: center;
+        justify-content: center;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-<!-- Google Translate -->
 <div id="google_translate_element"></div>
 
 <header>
   <h1>TheraWorks</h1>
-  <p><strong>Reliable Digital Support for Your Business</strong><br>
-  Data Entry, Admin Support & Digital Assistance</p>
+  <p>Premium Digital Support — calm, reliable, and handled with care.</p>
 </header>
 
 <section>
-  <div class="card">
-    <h2>About TheraWorks</h2>
-    <p>
-      TheraWorks is a solo freelance service providing accurate, reliable, and confidential digital support for businesses.
-      Managed personally by Thera, every project is handled with care, attention to detail, and clear communication.
-    </p>
+
+  <div class="card profile">
+    <img src="profile.jpg" alt="Theresia - TheraWorks">
+    <div>
+      <h2>Meet Thera</h2>
+      <p>
+        Hi, I’m <strong>Theresia</strong> — you can call me <strong>Thera</strong>.
+        I’m the person behind <strong>TheraWorks</strong>.
+      </p>
+      <p>
+        I help business owners reduce daily workload, organize their data,
+        and regain focus on what truly matters.
+        Every project is handled personally with attention, discretion,
+        and clear communication.
+      </p>
+    </div>
   </div>
 
   <div class="card">
     <h2>Services</h2>
     <ul>
-      <li>Data Entry (Excel / Google Sheets)</li>
-      <li>PDF to Excel / Word</li>
+      <li>Data Entry & Spreadsheet Organization</li>
+      <li>PDF to Excel / Word Conversion</li>
       <li>Data Cleaning & Formatting</li>
       <li>Web Research</li>
-      <li>Admin Support</li>
+      <li>Admin & Digital Support</li>
     </ul>
   </div>
 
   <div class="card">
-    <h2>Why Choose TheraWorks</h2>
-    <ul>
-      <li>Detail-oriented and accurate</li>
-      <li>Confidential data handling</li>
-      <li>Fast and clear communication</li>
-      <li>Solo freelancer — no middleman</li>
-      <li>Trusted by UMKM and international clients</li>
-    </ul>
+    <h2>Selected Work</h2>
+    <div class="portfolio-item">
+      <strong>Spreadsheet Data Cleanup</strong><br>
+      Organized and standardized large datasets for small business reporting.
+    </div>
+    <div class="portfolio-item">
+      <strong>PDF to Excel Conversion</strong><br>
+      Converted multi-page documents into clean, editable spreadsheets.
+    </div>
+    <div class="portfolio-item">
+      <strong>Ongoing Admin Support</strong><br>
+      Assisted business owners with routine digital tasks to save time weekly.
+    </div>
   </div>
 
   <div class="card">
-    <h2>How It Works</h2>
+    <h2>How I Work</h2>
     <ol>
-      <li>Contact & project briefing</li>
-      <li>Quotation</li>
-      <li>Work in progress</li>
+      <li>Project discussion & clarity</li>
+      <li>Transparent quotation</li>
+      <li>Careful execution</li>
       <li>Review & final delivery</li>
     </ol>
   </div>
 
-  <div class="card cta">
-    <h2>Contact Me</h2>
-    <p>Let’s discuss your project.</p>
+  <div class="card">
+    <h2>Contact</h2>
+    <p>If you’re looking for calm, reliable digital support, let’s talk.</p>
 
     <form action="mailto:yourname@email.com" method="post" enctype="text/plain">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+      <textarea name="message" rows="5" placeholder="Tell me about your project"></textarea>
       <button type="submit">Send Message</button>
     </form>
   </div>
+
 </section>
 
 <footer>
-  © 2026 TheraWorks — Professional Digital Support
+  © 2026 TheraWorks — Digital Support by Thera
 </footer>
 
-<!-- WhatsApp -->
 <a href="https://wa.me/6282114002132" class="whatsapp-float" target="_blank">
   <span>💬</span>
 </a>
 
-<!-- Google Translate Script -->
 <script type="text/javascript">
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
@@ -220,4 +254,3 @@
 
 </body>
 </html>
-
