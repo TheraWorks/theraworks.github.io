@@ -1,163 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>TheraWorks | Digital Support by Thera</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<title>TheraWorks | Digital Support by Thera</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #f7f8f6;
-      color: #333;
-      line-height: 1.7;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f7f8f6;
+  color: #333;
+  line-height: 1.7;
+}
 
-    header {
-      background: linear-gradient(135deg, #7fa99b, #4f6f64);
-      color: #fff;
-      text-align: center;
-      padding: 80px 20px;
-    }
+header {
+  background: linear-gradient(135deg, #7fa99b, #4f6f64);
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
 
-    header h1 {
-      font-size: 38px;
-      margin-bottom: 10px;
-      font-weight: 600;
-    }
+header h1 {
+  font-size: 36px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
 
-    header p {
-      font-size: 16px;
-      max-width: 720px;
-      margin: auto;
-      opacity: 0.95;
-    }
+header p {
+  font-size: 15px;
+  max-width: 720px;
+  margin: auto;
+}
 
-    section {
-      max-width: 920px;
-      margin: auto;
-      padding: 60px 20px;
-    }
+section {
+  max-width: 920px;
+  margin: auto;
+  padding: 60px 20px;
+}
 
-    h2 {
-      color: #4f6f64;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
+h2 {
+  color: #4f6f64;
+  margin-bottom: 20px;
+}
 
-    .card {
-      background: #ffffff;
-      padding: 36px;
-      border-radius: 16px;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.05);
-      margin-bottom: 45px;
-    }
+.card {
+  background: #fff;
+  padding: 36px;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.05);
+  margin-bottom: 45px;
+}
 
-    /* Profile */
-    .profile {
-      display: flex;
-      gap: 35px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+/* Profile */
+.profile {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
-    .profile img {
-      width: 150px;
-      border-radius: 50%;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
+.profile img {
+  width: 150px;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
 
-    /* Portfolio */
-    .portfolio-item {
-      margin-bottom: 20px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #e0e0e0;
-    }
+/* Portfolio */
+.portfolio-item {
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #e0e0e0;
+}
 
-    .portfolio-item:last-child {
-      border-bottom: none;
-    }
+.portfolio-item:last-child {
+  border-bottom: none;
+}
 
-    /* Form */
-    form input, form textarea {
-      width: 100%;
-      padding: 14px;
-      margin-bottom: 15px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-family: 'Poppins', sans-serif;
-      font-size: 14px;
-    }
+/* Form */
+input, textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+}
 
-    form button {
-      background: #4f6f64;
-      color: #fff;
-      border: none;
-      padding: 14px 32px;
-      border-radius: 30px;
-      font-size: 15px;
-      cursor: pointer;
-    }
+button {
+  background: #4f6f64;
+  color: #fff;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+}
 
-    footer {
-      text-align: center;
-      background: #354f52;
-      color: #fff;
-      padding: 25px;
-      font-size: 14px;
-    }
+/* Footer */
+footer {
+  background: #354f52;
+  color: #fff;
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+}
 
-    /* WhatsApp Floating */
-    .whatsapp-float {
-      position: fixed;
-      width: 55px;
-      height: 55px;
-      bottom: 25px;
-      right: 25px;
-      background-color: #25d366;
-      color: #fff;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 28px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      z-index: 100;
-    }
+/* WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  bottom: 25px;
+  right: 25px;
+  background: #25d366;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 28px;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 999;
+}
 
-    .whatsapp-float span {
-      line-height: 55px;
-    }
+.whatsapp-float span {
+  line-height: 55px;
+}
 
-    /* Translate */
-    #google_translate_element {
-      position: fixed;
-      top: 15px;
-      right: 15px;
-      z-index: 200;
-    }
+/* Client Modal */
+#client-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
 
-    /* Mobile Adjustments */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 28px;
-      }
-      header p {
-        font-size: 14px;
-      }
-      .profile {
-        text-align: center;
-        justify-content: center;
-      }
-    }
-  </style>
+.client-box {
+  background: #fff;
+  padding: 38px;
+  border-radius: 18px;
+  text-align: center;
+  max-width: 360px;
+  width: 90%;
+}
+
+.client-box h3 {
+  color: #4f6f64;
+}
+
+.client-box p {
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+
+.client-box button {
+  width: 100%;
+  margin: 8px 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  header h1 { font-size: 28px; }
+  header p { font-size: 14px; }
+  .profile { text-align: center; justify-content: center; }
+}
+</style>
 </head>
 
 <body>
 
-<div id="google_translate_element"></div>
+<!-- CLIENT TYPE POPUP -->
+<div id="client-modal">
+  <div class="client-box">
+    <h3>Welcome to TheraWorks</h3>
+    <p>To better tailor my services and pricing,<br>please select your client type.</p>
+    <button onclick="setClientType('indonesia')">🇮🇩 Indonesia-based Client</button>
+    <button onclick="setClientType('international')">🌍 International Client</button>
+  </div>
+</div>
 
 <header>
   <h1>TheraWorks</h1>
@@ -166,101 +191,98 @@
 
 <section>
 
-  <div class="card profile">
-    <img src="profile.jpg" alt="Theresia - TheraWorks">
-    <div>
-      <h2>Meet Thera</h2>
-
-      <p>
-        Hi, I’m <strong>Theresia</strong> — you can call me <strong>Thera</strong>.
-        I’m the person behind <strong>TheraWorks</strong>.
-      </p>
-
-      <p>
-        With over 10 years of professional experience, I support business owners by handling
-        data organization, administrative tasks, and daily digital work — so they can stay focused
-        on growing their business.
-      </p>
-
-      <p>
-        I work personally on every project with care, confidentiality, and clear communication.
-        You won’t be handed over to a team — you’ll work directly with me.
-      </p>
-    </div>
+<div class="card profile">
+  <img src="profile.jpg" alt="Theresia - TheraWorks">
+  <div>
+    <h2>Meet Thera</h2>
+    <p>
+      Hi, I’m <strong>Theresia</strong> — you can call me <strong>Thera</strong>.
+      I’m the person behind <strong>TheraWorks</strong>.
+    </p>
+    <p>
+      With over 10 years of professional experience, I support business owners by handling
+      data organization, administrative tasks, and daily digital work — so they can focus
+      on growing their business.
+    </p>
+    <p>
+      I work personally on every project with care, confidentiality, and clear communication.
+    </p>
   </div>
+</div>
 
-  <div class="card">
-    <h2>Services</h2>
-    <ul>
-      <li>Data Entry & Spreadsheet Organization</li>
-      <li>PDF to Excel / Word Conversion</li>
-      <li>Data Cleaning & Formatting</li>
-      <li>Web Research</li>
-      <li>Administrative & Digital Support</li>
-    </ul>
-  </div>
+<div class="card">
+  <h2>Services</h2>
+  <ul>
+    <li>Data Entry & Spreadsheet Organization</li>
+    <li>PDF to Excel / Word Conversion</li>
+    <li>Data Cleaning & Formatting</li>
+    <li>Web Research</li>
+    <li>Administrative & Digital Support</li>
+  </ul>
+</div>
 
-  <div class="card">
-    <h2>Selected Work</h2>
+<div class="card">
+  <h2>Selected Work</h2>
+  <div class="portfolio-item"><strong>Spreadsheet Data Cleanup</strong><br>Standardized datasets for reporting.</div>
+  <div class="portfolio-item"><strong>PDF to Excel Conversion</strong><br>Converted documents into editable files.</div>
+  <div class="portfolio-item"><strong>Ongoing Admin Support</strong><br>Weekly task assistance for business owners.</div>
+</div>
 
-    <div class="portfolio-item">
-      <strong>Spreadsheet Data Cleanup</strong><br>
-      Organized and standardized datasets for small business reporting.
-    </div>
+<!-- PRICING -->
+<div class="card pricing indonesia">
+  <h2>Pricing — Indonesia-based Clients</h2>
+  <p>Services tailored to local workflows and business needs.</p>
+  <p><strong>Estimated range:</strong><br>IDR 50.000 – 150.000 / task or hour</p>
+</div>
 
-    <div class="portfolio-item">
-      <strong>PDF to Excel Conversion</strong><br>
-      Converted multi-page documents into clean, editable spreadsheets.
-    </div>
+<div class="card pricing international" style="display:none;">
+  <h2>Pricing — International Clients</h2>
+  <p>Services follow international standards, timelines, and documentation.</p>
+  <p><strong>Estimated range:</strong><br>USD 8 – 20 / hour or project-based</p>
+</div>
 
-    <div class="portfolio-item">
-      <strong>Ongoing Admin Support</strong><br>
-      Assisted business owners with routine digital tasks to save time weekly.
-    </div>
-  </div>
-
-  <div class="card">
-    <h2>How I Work</h2>
-    <ol>
-      <li>Project discussion & clarity</li>
-      <li>Transparent quotation</li>
-      <li>Careful execution</li>
-      <li>Review & final delivery</li>
-    </ol>
-  </div>
-
-  <div class="card">
-    <h2>Contact</h2>
-    <p>If you’re looking for calm, reliable digital support, let’s talk.</p>
-
-    <form action="mailto:yourname@email.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Tell me about your project"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
+<div class="card">
+  <h2>Contact</h2>
+  <p>If you’re looking for calm, reliable support, let’s talk.</p>
+  <form action="mailto:yourname@email.com" method="post" enctype="text/plain">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Tell me about your project"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</div>
 
 </section>
 
 <footer>
-  © 2026 TheraWorks — Digital Support by Thera
+© 2026 TheraWorks — Digital Support by Thera
 </footer>
 
 <a href="https://wa.me/62XXXXXXXXXX" class="whatsapp-float" target="_blank">
   <span>💬</span>
 </a>
 
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      includedLanguages: 'en,id',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
+<script>
+function setClientType(type) {
+  localStorage.setItem('clientType', type);
+  document.getElementById('client-modal').style.display = 'none';
+  updatePricing(type);
+}
+
+function updatePricing(type) {
+  document.querySelectorAll('.pricing').forEach(p => p.style.display = 'none');
+  const active = document.querySelector('.pricing.' + type);
+  if (active) active.style.display = 'block';
+}
+
+window.onload = function () {
+  const saved = localStorage.getItem('clientType');
+  if (saved) {
+    document.getElementById('client-modal').style.display = 'none';
+    updatePricing(saved);
   }
+};
 </script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
