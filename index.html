@@ -1,326 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-
-  <title>TheraWorks | Data Entry Specialist for Growing Businesses</title>
-
-  <meta name="description" content="TheraWorks provides professional data entry and spreadsheet support for businesses seeking accuracy, structure, and peace of mind. Led by Thera with 10+ years of experience.">
-  <meta name="keywords" content="data entry specialist, data entry services Indonesia, freelance data entry, spreadsheet management, virtual assistant data entry">
-  <meta name="author" content="TheraWorks">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="TheraWorks | Data Entry Specialist">
-  <meta property="og:description" content="Structured, reliable data entry support led by Thera.">
-  <meta property="og:type" content="website">
-
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <!-- STRUCTURED DATA -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Theresia",
-    "alternateName": "Thera",
-    "jobTitle": "Data Entry Specialist",
-    "url": "https://USERNAME.github.io/REPO/",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "TheraWorks"
-    },
-    "knowsAbout": [
-      "Data Entry",
-      "Spreadsheet Management",
-      "Data Cleaning",
-      "Administrative Support"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "ID"
-    }
-  }
-  </script>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #f7f9f8;
-      color: #2f2f2f;
-      line-height: 1.7;
-    }
-
-    h1, h2, h3 {
-      color: #425f55;
-      font-weight: 500;
-    }
-
-    section {
-      padding: 80px 20px;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    /* HERO */
-    .hero {
-      background: linear-gradient(135deg, #e4efeb, #f7f9f8);
-      text-align: center;
-      padding: 100px 20px;
-    }
-
-    .profile-wrapper {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 24px;
-    }
-
-    .profile-wrapper img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #fff;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-    }
-
-    .hero h1 {
-      font-size: 36px;
-      margin-bottom: 12px;
-    }
-
-    .hero p {
-      font-size: 17px;
-      max-width: 700px;
-      margin: auto;
-      color: #4a4a4a;
-    }
-
-    /* ABOUT */
-    .about p {
-      max-width: 800px;
-      margin: auto;
-      font-size: 16px;
-      color: #4f4f4f;
-    }
-
-    /* PRICING */
-    .pricing-section {
-      text-align: center;
-    }
-
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 32px;
-      margin-top: 50px;
-    }
-
-    .pricing-card {
-      background: #ffffff;
-      padding: 42px 34px;
-      border-radius: 24px;
-      box-shadow: 0 18px 45px rgba(0,0,0,0.08);
-      text-align: left;
-    }
-
-    .pricing-card.featured {
-      border: 2px solid #425f55;
-      transform: translateY(-6px);
-    }
-
-    .price {
-      font-size: 22px;
-      font-weight: 600;
-      margin: 18px 0;
-    }
-
-    ul {
-      padding-left: 18px;
-    }
-
-    ul li {
-      font-size: 14.5px;
-      margin-bottom: 10px;
-    }
-
-    .note {
-      font-size: 13.5px;
-      color: #777;
-    }
-
-    /* CONTACT */
-    form {
-      max-width: 600px;
-      margin: auto;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 13px;
-      margin-bottom: 16px;
-      border-radius: 12px;
-      border: 1px solid #ccc;
-      font-family: inherit;
-    }
-
-    button {
-      background: #425f55;
-      color: white;
-      border: none;
-      padding: 13px 28px;
-      border-radius: 28px;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    /* WHATSAPP FLOAT */
-    .wa-float {
-      position: fixed;
-      bottom: 22px;
-      right: 22px;
-      width: 56px;
-      height: 56px;
-      background: #25D366;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-      z-index: 999;
-    }
-
-    .wa-float svg {
-      width: 26px;
-      height: 26px;
-      fill: white;
-    }
-
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 28px; }
-      .hero p { font-size: 15.5px; }
-    }
-  </style>
-</head>
-
-<body>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="profile-wrapper">
-    <!-- GANTI FOTO -->
-    <img src="profile.jpg" alt="Thera - Data Entry Specialist">
-  </div>
-
-  <h1>TheraWorks</h1>
-
-  <p data-en>
-    Hi, I’m Theresia — you can call me <strong>Thera</strong>.
-    I provide structured and reliable data entry support for businesses
-    that value accuracy, clarity, and consistency.
-  </p>
-
-  <p data-id style="display:none;">
-    Halo, saya Theresia — panggil saja <strong>Thera</strong>.
-    Saya membantu bisnis mengelola data secara rapi, akurat,
-    dan konsisten agar Anda bisa fokus pada pengembangan usaha.
-  </p>
-</section>
-
-<!-- ABOUT -->
-<section class="about">
-  <div class="container">
-    <h2 data-en>About Thera</h2>
-    <h2 data-id style="display:none;">Tentang Thera</h2>
-
-    <p data-en>
-      With over <strong>10 years of professional experience</strong>,
-      I work independently with a limited number of clients to ensure
-      quality, confidentiality, and dependable long-term support.
-    </p>
-
-    <p data-id style="display:none;">
-      Dengan pengalaman profesional lebih dari <strong>10 tahun</strong>,
-      saya bekerja secara independen dengan jumlah klien terbatas
-      untuk menjaga kualitas, kerahasiaan, dan konsistensi kerja.
-    </p>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="pricing-section">
-  <div class="container">
-    <h2 data-en>Data Entry Support Packages</h2>
-    <h2 data-id style="display:none;">Paket Layanan Data Entry</h2>
-
-    <div class="pricing-grid">
-      <div class="pricing-card">
-        <h3>Starter</h3>
-        <p class="price">IDR 2.500.000 / month</p>
-        <ul>
-          <li>Data entry & basic cleanup</li>
-          <li>Spreadsheet updates</li>
-          <li>Up to 40 hours / month</li>
-        </ul>
-        <p class="note" data-en>Suitable for light to moderate workloads.</p>
-        <p class="note" data-id style="display:none;">Cocok untuk kebutuhan ringan hingga menengah.</p>
-      </div>
-
-      <div class="pricing-card featured">
-        <h3>Professional</h3>
-        <p class="price">IDR 5.000.000 / month</p>
-        <ul>
-          <li>Everything in Starter</li>
-          <li>Higher data volume</li>
-          <li>Up to 80 hours / month</li>
-        </ul>
-        <p class="note" data-en>Ideal for growing businesses.</p>
-        <p class="note" data-id style="display:none;">Ideal untuk bisnis yang sedang berkembang.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section>
-  <div class="container">
-    <h2>Contact</h2>
-
-    <!-- FORM TO EMAIL -->
-    <form action="https://formspree.io/f/abcdwxyz" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <textarea name="message" rows="4" placeholder="Tell me about your project" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-
-    <p style="font-size:13px;color:#666;margin-top:10px;">
-      I will respond within 1–2 business days.
-    </p>
-  </div>
-</section>
-
-<!-- WHATSAPP -->
-<a class="wa-float" href="https://wa.me/62XXXXXXXXXX" target="_blank" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 32 32">
-    <path d="M16 2.9c-7.2 0-13 5.8-13 13 0 2.3.6 4.6 1.8 6.6L3 29l6.7-1.8c1.9 1 4.1 1.6 6.3 1.6 7.2 0 13-5.8 13-13s-5.8-13-13-13z"/>
-  </svg>
-</a>
-
-<!-- LANGUAGE AUTO DETECT -->
 <script>
-  const lang = navigator.language || navigator.userLanguage;
-  if (lang.startsWith('id')) {
-    document.querySelectorAll('[data-en]').forEach(el => el.style.display = 'none');
-    document.querySelectorAll('[data-id]').forEach(el => el.style.display = 'block');
+  function applyLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      el.classList.toggle('hide', el.dataset.lang !== lang);
+    });
+
+    document.getElementById('pricing-id').classList.toggle('hide', lang !== 'id');
+    document.getElementById('pricing-en').classList.toggle('hide', lang !== 'en');
+
+    document.documentElement.lang = lang;
   }
+
+  function detectClient() {
+    const saved = localStorage.getItem('clientLang');
+    if (saved) {
+      applyLang(saved);
+      return;
+    }
+
+    const browserLang = navigator.language || navigator.userLanguage;
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+<script>
+  function applyLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      el.classList.toggle('hide', el.dataset.lang !== lang);
+    });
+
+    document.getElementById('pricing-id').classList.toggle('hide', lang !== 'id');
+    document.getElementById('pricing-en').classList.toggle('hide', lang !== 'en');
+
+    document.documentElement.lang = lang;
+  }
+
+  function detectClient() {
+    const saved = localStorage.getItem('clientLang');
+    if (saved) {
+      applyLang(saved);
+      return;
+    }
+
+    const browserLang = navigator.language || navigator.userLanguage;
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+    let detectedLang = 'en';
+
+    if (
+      browserLang.startsWith('id') ||
+      timezone === 'Asia/Jakarta'
+    ) {
+      detectedLang = 'id';
+    }
+
+    localStorage.setItem('clientLang', detectedLang);
+    applyLang(detectedLang);
+  }
+
+  window.onload = detectClient;
 </script>
 
-</body>
-</html>
+    let detectedLang = 'en';
 
+    if (
+      browserLang.startsWith('id') ||
+      timezone === 'Asia/Jakarta'
+    ) {
+      detectedLang = 'id';
+    }
+
+    localStorage.setItem('clientLang', detectedLang);
+    applyLang(detectedLang);
+  }
+
+  window.onload = detectClient;
+</script>
