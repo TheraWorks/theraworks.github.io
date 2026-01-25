@@ -21,18 +21,18 @@
       background: linear-gradient(135deg, #84a98c, #52796f);
       color: #fff;
       text-align: center;
-      padding: 80px 20px;
+      padding: 90px 20px;
     }
 
     header h1 {
       font-size: 42px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       font-weight: 600;
     }
 
     header p {
       font-size: 18px;
-      max-width: 700px;
+      max-width: 720px;
       margin: auto;
     }
 
@@ -56,7 +56,7 @@
       margin-bottom: 40px;
     }
 
-    ul {
+    ul, ol {
       padding-left: 20px;
     }
 
@@ -70,7 +70,6 @@
       padding: 40px;
     }
 
-    /* Contact Form */
     form input, form textarea {
       width: 100%;
       padding: 14px;
@@ -85,7 +84,7 @@
       background: #52796f;
       color: #fff;
       border: none;
-      padding: 14px 28px;
+      padding: 14px 30px;
       border-radius: 30px;
       font-size: 15px;
       cursor: pointer;
@@ -103,7 +102,7 @@
       font-size: 14px;
     }
 
-    /* WhatsApp Floating Button */
+    /* WhatsApp Floating */
     .whatsapp-float {
       position: fixed;
       width: 55px;
@@ -114,7 +113,7 @@
       color: #fff;
       border-radius: 50%;
       text-align: center;
-      font-size: 30px;
+      font-size: 28px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.3);
       z-index: 100;
     }
@@ -123,31 +122,34 @@
       line-height: 55px;
     }
 
-    .whatsapp-float:hover {
-      background-color: #1ebe5d;
-    }
-
-    a {
-      color: #52796f;
-      text-decoration: none;
-      font-weight: 500;
+    /* Translate Widget */
+    #google_translate_element {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      z-index: 200;
     }
   </style>
 </head>
 
 <body>
 
+<!-- Google Translate -->
+<div id="google_translate_element"></div>
+
 <header>
   <h1>TheraWorks</h1>
   <p><strong>Reliable Digital Support for Your Business</strong><br>
-  Data Entry, Admin Support & Digital Assistance for UMKM and Global Clients</p>
+  Data Entry, Admin Support & Digital Assistance</p>
 </header>
 
 <section>
   <div class="card">
     <h2>About TheraWorks</h2>
-    <p><strong>EN:</strong> TheraWorks is a solo freelance service providing accurate, reliable, and confidential digital support. Managed personally by Thera, each project is handled with care, detail, and clear communication.</p>
-    <p><strong>ID:</strong> TheraWorks adalah layanan freelance individu yang menyediakan dukungan digital secara rapi, profesional, dan terpercaya. Semua pekerjaan ditangani langsung oleh Thera.</p>
+    <p>
+      TheraWorks is a solo freelance service providing accurate, reliable, and confidential digital support for businesses.
+      Managed personally by Thera, every project is handled with care, attention to detail, and clear communication.
+    </p>
   </div>
 
   <div class="card">
@@ -164,21 +166,21 @@
   <div class="card">
     <h2>Why Choose TheraWorks</h2>
     <ul>
-      <li>Detail-oriented & accurate</li>
+      <li>Detail-oriented and accurate</li>
       <li>Confidential data handling</li>
-      <li>Fast & clear communication</li>
+      <li>Fast and clear communication</li>
       <li>Solo freelancer — no middleman</li>
-      <li>Friendly for UMKM & international clients</li>
+      <li>Trusted by UMKM and international clients</li>
     </ul>
   </div>
 
   <div class="card">
     <h2>How It Works</h2>
     <ol>
-      <li>Contact & brief</li>
+      <li>Contact & project briefing</li>
       <li>Quotation</li>
       <li>Work in progress</li>
-      <li>Review & delivery</li>
+      <li>Review & final delivery</li>
     </ol>
   </div>
 
@@ -192,11 +194,6 @@
       <textarea name="message" rows="5" placeholder="Your Message"></textarea>
       <button type="submit">Send Message</button>
     </form>
-
-    <p style="margin-top:20px;">
-      📧 Email: <strong>connectwith.theresia@gmail.com</strong><br>
-      📱 WhatsApp available via button below
-    </p>
   </div>
 </section>
 
@@ -204,14 +201,25 @@
   © 2026 TheraWorks — Professional Digital Support
 </footer>
 
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/6282114002132" class="whatsapp-float" target="_blank">
+<!-- WhatsApp -->
+<a href="https://wa.me/62XXXXXXXXXX" class="whatsapp-float" target="_blank">
   <span>💬</span>
 </a>
 
+<!-- Google Translate Script -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,id',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 </html>
-<footer>
   © 2026 TheraWorks. All rights reserved.
 </footer>
 
