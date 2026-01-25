@@ -1,74 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TheraWorks | Professional Data Entry Specialist</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="TheraWorks provides professional data entry and administrative support. Led by Thera with over 10 years of experience.">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f7f9f8;
+  color: #333;
+  line-height: 1.7;
+}
+
+section { padding: 80px 20px; }
+.container { max-width: 1000px; margin: auto; }
+
+h1, h2, h3 { color: #4f6f64; font-weight: 500; }
+
+.hide { display: none; }
+
+/* HERO */
+.hero {
+  text-align: center;
+  background: linear-gradient(135deg, #e8f1ee, #f7f9f8);
+}
+
+.hero img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 12px 25px rgba(0,0,0,.15);
+  margin-bottom: 20px;
+}
+
+/* CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background: #fff;
+  padding: 32px;
+  border-radius: 22px;
+  box-shadow: 0 15px 40px rgba(0,0,0,.08);
+}
+
+.featured { border: 2px solid #4f6f64; }
+
+/* FORM */
+form { max-width: 600px; margin: auto; }
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #4f6f64;
+  color: #fff;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* WHATSAPP */
+.wa {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+}
+
+.wa svg { width: 26px; fill: #fff; }
+
+/* MODAL */
+#clientModal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-box {
+  background: #fff;
+  padding: 32px;
+  border-radius: 18px;
+  text-align: center;
+  max-width: 360px;
+}
+footer {
+  text-align: center;
+  font-size: 13px;
+  padding: 30px;
+  color: #777;
+}
+</style>
+</head>
+
+<body>
+
+<!-- CLIENT BASE POPUP -->
+<div id="clientModal">
+  <div class="modal-box">
+    <h3>Welcome to TheraWorks</h3>
+    <p>Please select your client base</p>
+    <button onclick="setClientBase('id')" style="width:100%;margin-top:10px;">🇮🇩 Indonesian-based Client</button>
+    <button onclick="setClientBase('int')" style="width:100%;margin-top:10px;">🌍 International-based Client</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="profile.jpg" alt="Thera">
+
+  <h1 data-lang="en">Well-Organized Data, A Lighter Workload</h1>
+  <h1 data-lang="id" class="hide">Data Rapi, Pekerjaan Jadi Lebih Ringan</h1>
+
+  <p data-lang="en">
+    I’m Theresia — you can call me <strong>Thera</strong>.<br>
+    I help business owners and professionals stay focused,<br>
+    while I handle their data with care, accuracy, and consistency.
+  </p>
+
+  <p data-lang="id" class="hide">
+    Saya Theresia — panggil saya <strong>Thera</strong>.<br>
+    Saya membantu pemilik bisnis dan profesional fokus pada hal penting,<br>
+    sementara urusan data saya tangani dengan rapi dan konsisten.
+  </p>
+</section>
+
+<!-- ABOUT -->
+<section>
+  <div class="container">
+    <h2 data-lang="en">About Thera</h2>
+    <h2 data-lang="id" class="hide">Tentang Thera</h2>
+
+    <p data-lang="en">
+      With over <strong>10 years of professional experience</strong>,
+      I specialize in managing data and administrative tasks that require precision and consistency.
+      I work independently to provide personal, reliable, and structured support.
+    </p>
+
+    <p data-lang="id" class="hide">
+      Dengan pengalaman lebih dari <strong>10 tahun di dunia kerja</strong>,
+      saya terbiasa menangani data dan pekerjaan administratif yang membutuhkan ketelitian dan konsistensi.
+      Saya bekerja secara mandiri agar setiap klien mendapatkan perhatian yang personal dan terstruktur.
+    </p>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section>
+  <div class="container">
+
+    <!-- INDONESIA -->
+    <div id="pricing-id" class="grid">
+      <div class="card">
+        <h3>Starter</h3>
+        <p><strong>Rp 2.500.000 / bulan</strong></p>
+        <ul>
+          <li>Data entry & data cleanup</li>
+          <li>Spreadsheet management</li>
+          <li>Up to 40 working hours</li>
+        </ul>
+      </div>
+
+      <div class="card featured">
+        <h3>Professional</h3>
+        <p><strong>Rp 5.000.000 / bulan</strong></p>
+        <ul>
+          <li>Everything in Starter</li>
+          <li>Higher data volume</li>
+          <li>Up to 80 working hours</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- INTERNATIONAL -->
+    <div id="pricing-int" class="grid hide">
+      <div class="card featured">
+        <h3>International Data Support</h3>
+        <p><strong>USD 8 – 20 / hour</strong></p>
+        <p>Professional data entry aligned with international work standards.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section>
+  <div class="container">
+    <h2>Contact</h2>
+    <p data-lang="en">Tell me a bit about your needs. I will respond personally.</p>
+    <p data-lang="id" class="hide">Ceritakan kebutuhan Anda. Saya akan merespons secara pribadi.</p>
+
+    <form action="https://formspree.io/f/abcdwxyz" method="POST">
+      <input type="text" name="name" placeholder="Name">
+      <input type="email" name="email" placeholder="Email">
+      <textarea name="message" placeholder="Your message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- WHATSAPP -->
+<a class="wa" href="https://wa.me/62XXXXXXXXXX" target="_blank">
+<svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.3.6 4.5 1.8 6.4L3 29l7.3-2c1.9 1 4.1 1.5 6.3 1.5 7 0 12.5-5.5 12.5-12.5S23 3 16 3z"/></svg>
+</a>
+
+<!-- FOOTER -->
+<footer>
+  Language:
+  <a href="#" onclick="setLang('en')">English</a> |
+  <a href="#" onclick="setLang('id')">Bahasa Indonesia</a>
+</footer>
+
 <script>
-  function applyLang(lang) {
-    document.querySelectorAll('[data-lang]').forEach(el => {
-      el.classList.toggle('hide', el.dataset.lang !== lang);
-    });
+function setClientBase(base) {
+  localStorage.setItem('clientBase', base);
+  document.getElementById('clientModal').style.display = 'none';
+  document.getElementById('pricing-id').classList.toggle('hide', base !== 'id');
+  document.getElementById('pricing-int').classList.toggle('hide', base !== 'int');
+}
 
-    document.getElementById('pricing-id').classList.toggle('hide', lang !== 'id');
-    document.getElementById('pricing-en').classList.toggle('hide', lang !== 'en');
+function setLang(lang) {
+  localStorage.setItem('siteLang', lang);
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    el.classList.toggle('hide', el.dataset.lang !== lang);
+  });
+  document.documentElement.lang = lang;
+}
 
-    document.documentElement.lang = lang;
-  }
-
-  function detectClient() {
-    const saved = localStorage.getItem('clientLang');
-    if (saved) {
-      applyLang(saved);
-      return;
-    }
-
-    const browserLang = navigator.language || navigator.userLanguage;
-    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-<script>
-  function applyLang(lang) {
-    document.querySelectorAll('[data-lang]').forEach(el => {
-      el.classList.toggle('hide', el.dataset.lang !== lang);
-    });
-
-    document.getElementById('pricing-id').classList.toggle('hide', lang !== 'id');
-    document.getElementById('pricing-en').classList.toggle('hide', lang !== 'en');
-
-    document.documentElement.lang = lang;
-  }
-
-  function detectClient() {
-    const saved = localStorage.getItem('clientLang');
-    if (saved) {
-      applyLang(saved);
-      return;
-    }
-
-    const browserLang = navigator.language || navigator.userLanguage;
-    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-
-    let detectedLang = 'en';
-
-    if (
-      browserLang.startsWith('id') ||
-      timezone === 'Asia/Jakarta'
-    ) {
-      detectedLang = 'id';
-    }
-
-    localStorage.setItem('clientLang', detectedLang);
-    applyLang(detectedLang);
-  }
-
-  window.onload = detectClient;
+window.onload = () => {
+  setLang(localStorage.getItem('siteLang') || 'en');
+  const base = localStorage.getItem('clientBase');
+  if (base) setClientBase(base);
+};
 </script>
 
-    let detectedLang = 'en';
-
-    if (
-      browserLang.startsWith('id') ||
-      timezone === 'Asia/Jakarta'
-    ) {
-      detectedLang = 'id';
-    }
-
-    localStorage.setItem('clientLang', detectedLang);
-    applyLang(detectedLang);
-  }
-
-  window.onload = detectClient;
-</script>
+</body>
+</html>
