@@ -76,6 +76,12 @@ h2 {
   box-shadow: 0 12px 35px rgba(0,0,0,0.05);
   margin-bottom: 45px;
 }
+  
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
 
 /* Profile */
 .profile {
@@ -193,6 +199,12 @@ footer {
     letter-spacing: 3px;
   }
 
+@media (max-width: 768px) {
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+}
+
   header p {
     font-size: 14px;
   }
@@ -262,6 +274,30 @@ footer {
     <li>Document conversion and data extraction</li>
     <li>Ongoing administrative and digital support</li>
   </ul>
+</div>
+
+<div class="card two-column">
+  
+  <div>
+    <h2>Who This Is For</h2>
+    <ul>
+      <li>Business owners managing ongoing transaction or sales data</li>
+      <li>Online shops and e-commerce operations</li>
+      <li>Teams needing structured customer and operational records</li>
+      <li>Professionals seeking reliable, long-term data support</li>
+    </ul>
+  </div>
+
+  <div>
+    <h2>What This Service Is Not</h2>
+    <p>
+      This service is not intended to replace professional accounting,
+      financial analysis, or strategic data consulting.
+      It focuses on accurate data handling, organization,
+      and operational support.
+    </p>
+  </div>
+
 </div>
 
 <div class="card">
