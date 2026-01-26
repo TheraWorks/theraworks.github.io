@@ -24,33 +24,21 @@ header {
 }
 
 header h1 {
-  font-size: 48px;
-  margin-bottom: 6px;
+  font-size: 44px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+header h1 span {
   font-weight: 300;
-  letter-spacing: 6px;
-  text-transform: uppercase;
-  color: #e6c77b;
 }
 
-.brand-thera {
-  font-weight: 600;
+header .divider {
+  width: 60px;
+  height: 2px;
+  background: #d4af37;
+  margin: 18px auto;
 }
-
-.brand-works {
-  font-weight: 300;
-  opacity: 0.85;
-}
-
-header h1::after {
-  content: "";
-  display: block;
-  width: 180px;
-  height: 1px;
-  background: #e6c77b;
-  margin: 14px auto 0;
-  opacity: 0.7;
-}
-
 
 header p {
   font-size: 15px;
@@ -59,7 +47,7 @@ header p {
 }
 
 section {
-  max-width: 920px;
+  max-width: 960px;
   margin: auto;
   padding: 60px 20px;
 }
@@ -69,6 +57,16 @@ h2 {
   margin-bottom: 20px;
 }
 
+h3 {
+  margin-top: 0;
+}
+
+h4 {
+  margin-top: 26px;
+  font-size: 15px;
+  color: #4f6f64;
+}
+
 .card {
   background: #fff;
   padding: 36px;
@@ -76,19 +74,28 @@ h2 {
   box-shadow: 0 12px 35px rgba(0,0,0,0.05);
   margin-bottom: 45px;
 }
-  
-  .note {
-  font-size: 13px;
-  opacity: 0.7;
-  margin-top: 10px;
-}
 
 .two-column {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 40px;
+  flex-wrap: wrap;
 }
-  
+
+.two-column > div {
+  flex: 1;
+  min-width: 260px;
+}
+
+ul {
+  padding-left: 18px;
+}
+
+.note {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-top: 20px;
+}
+
 /* Profile */
 .profile {
   display: flex;
@@ -101,47 +108,6 @@ h2 {
   width: 150px;
   border-radius: 50%;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-/* Portfolio */
-.portfolio-item {
-  margin-bottom: 18px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.portfolio-item:last-child {
-  border-bottom: none;
-}
-
-/* Form */
-input, textarea {
-  width: 100%;
-  padding: 14px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  font-family: 'Poppins', sans-serif;
-}
-
-button {
-  background: #4f6f64;
-  color: #fff;
-  border: none;
-  padding: 14px 32px;
-  border-radius: 30px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-/* Footer */
-footer {
-  background: #354f52;
-  color: #fff;
-  text-align: center;
-  padding: 25px;
-  font-size: 14px;
 }
 
 /* WhatsApp */
@@ -164,283 +130,108 @@ footer {
   line-height: 55px;
 }
 
-/* Client Modal */
-#client-modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.55);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-.client-box {
-  background: #fff;
-  padding: 38px;
-  border-radius: 18px;
-  text-align: center;
-  max-width: 360px;
-  width: 90%;
-}
-
-.client-box h3 {
-  color: #4f6f64;
-}
-
-.client-box p {
-  font-size: 14px;
-  margin-bottom: 22px;
-}
-
-.client-box button {
-  width: 100%;
-  margin: 8px 0;
-}
-
 /* Mobile */
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 34px;
-    letter-spacing: 3px;
-  }
-
-@media (max-width: 768px) {
-  .two-column {
-    grid-template-columns: 1fr;
-  }
-}
-
-  header p {
-    font-size: 14px;
-  }
-
-  .profile {
-    text-align: center;
-    justify-content: center;
-  }
+  header h1 { font-size: 32px; }
+  .profile { text-align: center; justify-content: center; }
 }
 </style>
 </head>
 
 <body>
 
-<!-- CLIENT TYPE POPUP -->
-<div id="client-modal">
-  <div class="client-box">
-    <h3>Welcome to TheraWorks</h3>
-    <p>To better tailor my services and pricing,<br>please select your client type.</p>
-    <button onclick="setClientType('indonesia')">🇮🇩 Indonesia-based Client</button>
-    <button onclick="setClientType('international')">🌍 International Client</button>
-  </div>
-</div>
-
 <header>
-  <h1>TheraWorks</h1>
+  <h1>THERA<span>WORKS</span></h1>
+  <div class="divider"></div>
   <p>Calm, reliable digital support — handled personally.</p>
 </header>
 
 <section>
 
+<!-- PROFILE -->
 <div class="card profile">
-  <img src="profile.jpg" alt="Theresia - TheraWorks">
+  <img src="profile.jpg" alt="Thera">
   <div>
     <h2>Meet Thera</h2>
     <p>
       Hi, I’m <strong>Theresia</strong> — you can call me <strong>Thera</strong>.
-      I’m the person behind <strong>TheraWorks</strong>.
+      I provide structured, reliable digital support for businesses that value accuracy and calm execution.
     </p>
     <p>
-      With over 10 years of professional experience, I support business owners by handling
-      data organization, administrative tasks, and daily digital work — so they can focus
-      on growing their business.
-    </p>
-    <p>
-      I work personally on every project with care, confidentiality, and clear communication.
+      With over 10 years of professional experience, I personally handle each project with care,
+      confidentiality, and clear communication.
     </p>
   </div>
 </div>
 
-<div class="card">
-  <h2>Data I Work With</h2>
-  <p>
-    I support businesses by managing transactional data, sales records,
-    customer information, and other operational data — handled with care,
-    accuracy, and confidentiality.
-  </p>
-</div>
-
+<!-- SERVICES -->
 <div class="card">
   <h2>Services</h2>
   <ul>
-    <li>Data entry and organization for business operations</li>
-    <li>Transaction and sales record input</li>
-    <li>Customer and contact data management</li>
-    <li>Spreadsheet setup, cleaning, and formatting</li>
-    <li>Document conversion and data extraction</li>
+    <li>Data entry for transactions, sales, customers, or internal records</li>
+    <li>Spreadsheet setup, formatting, and organization</li>
+    <li>Data cleaning, validation, and consistency checks</li>
+    <li>PDF, document, or system-based data conversion</li>
     <li>Ongoing administrative and digital support</li>
   </ul>
 </div>
 
+<!-- WHO / WHAT -->
 <div class="card two-column">
-  
   <div>
     <h2>Who This Is For</h2>
-    <ul>
-      <li>Business owners managing ongoing transaction or sales data</li>
-      <li>Online shops and e-commerce operations</li>
-      <li>Teams needing structured customer and operational records</li>
-      <li>Professionals seeking reliable, long-term data support</li>
-    </ul>
-  </div>
-
-  <div>
-    <h2>What This Service Is Not</h2>
     <p>
-      This service is not intended to replace professional accounting,
-      financial analysis, or strategic data consulting.
-      It focuses on accurate data handling, organization,
-      and operational support.
+      Business owners, teams, and professionals who need accurate,
+      dependable data support for daily operations or ongoing work.
     </p>
   </div>
-
-</div>
-<p class="note">
-  All client data is handled with confidentiality and care.
-</p>
-
-<div class="card">
-  <h2>Selected Work</h2>
-  <div class="portfolio-item"><strong>Spreadsheet Data Cleanup</strong><br>Standardized datasets for reporting.</div>
-  <div class="portfolio-item"><strong>PDF to Excel Conversion</strong><br>Converted documents into editable files.</div>
-  <div class="portfolio-item"><strong>Ongoing Admin Support</strong><br>Weekly task assistance for business owners.</div>
+  <div>
+    <h2>What This Is Not</h2>
+    <p>
+      This service does not replace accounting, financial analysis,
+      or strategic data consulting.
+      It focuses on structured data handling and operational support.
+    </p>
+  </div>
 </div>
 
-<!-- PRICING -->
+<!-- PRICING INDONESIA -->
 <div class="card pricing indonesia">
   <h2>Pricing — Indonesia-based Clients</h2>
 
   <div class="two-column">
+
+    <!-- Starter -->
     <div>
       <h3>Starter Support</h3>
-      <p>Monthly: from <strong>IDR 2.500.000</strong></p>
-    </div>
-<h4>What’s included</h4>
-<ul>
-  <li>Accurate data entry from provided source files</li>
-  <li>Structured spreadsheets with consistent formatting</li>
-  <li>Light data cleaning and organization</li>
-  <li>Single-source data handling</li>
-  <li>Basic accuracy check</li>
-  <li>Organized file naming and folders</li>
-  <li>Task confirmation and delivery update</li>
-</ul>
-    <h4>Volume guide</h4>
-<ul>
-  <li>Small to moderate datasets</li>
-  <li>Single-source data (one file or system)</li>
-  <li>Routine or recurring entries</li>
-  <li>Typically up to a few hundred records per task</li>
-  <li>Minimal cross-checking required</li>
-</ul>
+      <p><strong>Monthly:</strong> from IDR 1.200.000<br>
+      <strong>Project-based:</strong> from IDR 75.000</p>
 
+      <h4>What’s included</h4>
+      <ul>
+        <li>Accurate data entry from provided sources</li>
+        <li>Structured spreadsheets with consistent formatting</li>
+        <li>Light data cleaning and organization</li>
+        <li>Single-source data handling</li>
+        <li>Basic accuracy check</li>
+        <li>Organized file naming and folders</li>
+      </ul>
+
+      <h4>Volume guide</h4>
+      <ul>
+        <li>Small to moderate datasets</li>
+        <li>Single-source data</li>
+        <li>Routine or recurring entries</li>
+        <li>Up to a few hundred records per task</li>
+      </ul>
+    </div>
+
+    <!-- Pro -->
     <div>
       <h3>Pro Data Support</h3>
-      <p>Monthly: from <strong>IDR 5.000.000</strong></p>
-    </div>
-  </div>
-</div>
-<h4>What’s included</h4>
-<ul>
-  <li>High-volume or multi-source data entry</li>
-  <li>Data validation and cross-checking</li>
-  <li>Transaction reconciliation and discrepancy checks</li>
-  <li>Consolidated datasets from multiple sources</li>
-  <li>Error flagging with clarification notes</li>
-  <li>Structured summaries or internal data reports</li>
-  <li>Version tracking for updated files</li>
-  <li>Priority handling and progress updates</li>
-</ul>
-  <h4>Volume guide</h4>
-<ul>
-  <li>Large or ongoing datasets</li>
-  <li>Multiple data sources or file types</li>
-  <li>Hundreds to thousands of records</li>
-  <li>Cross-checking and validation required</li>
-  <li>Reconciliation or consolidation may be needed</li>
-</ul>
-<p style="font-size:13px; opacity:0.7; margin-top:20px;">
-  Volume classification is based on data quantity, structure, number of sources,
-  and level of checking required — not on business size.
-</p>
+      <p><strong>Monthly:</strong> from IDR 3.000.000<br>
+      <strong>Project-based:</strong> from IDR 300.000+</p>
 
-<div class="card pricing international" style="display:none;">
-  <h2>Pricing — International Clients</h2>
-
-  <div class="two-column">
-    <div>
-      <h3>Starter Support</h3>
-      <p>Hourly: <strong>USD 12 – 18</strong></p>
-      <p>Monthly: from <strong>USD 400</strong></p>
-    </div>
-<p style="font-size:13px; opacity:0.7; margin-top:20px;">
-  Final pricing depends on data volume, structure, and turnaround time.
-</p>
-
-    <div>
-      <h3>Pro Data Support</h3>
-      <p>Hourly: <strong>USD 20 – 30</strong></p>
-      <p>Monthly: from <strong>USD 800</strong></p>
-    </div>
-  </div>
-</div>
-<p style="font-size:13px; opacity:0.7; margin-top:20px;">
-  Final pricing depends on data volume, structure, and turnaround time.
-</p>
-
-<div class="card">
-  <h2>Contact</h2>
-  <p>If you’re looking for calm, reliable support, let’s talk.</p>
-  <form action="mailto:yourname@email.com" method="post" enctype="text/plain">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" rows="5" placeholder="Tell me about your project"></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</div>
-
-</section>
-
-<footer>
-© 2026 TheraWorks — Digital Support by Thera
-</footer>
-
-<a href="https://wa.me/62XXXXXXXXXX" class="whatsapp-float" target="_blank">
-  <span>💬</span>
-</a>
-
-<script>
-function setClientType(type) {
-  localStorage.setItem('clientType', type);
-  document.getElementById('client-modal').style.display = 'none';
-  updatePricing(type);
-}
-
-function updatePricing(type) {
-  document.querySelectorAll('.pricing').forEach(p => p.style.display = 'none');
-  const active = document.querySelector('.pricing.' + type);
-  if (active) active.style.display = 'block';
-}
-
-window.onload = function () {
-  const saved = localStorage.getItem('clientType');
-  if (saved) {
-    document.getElementById('client-modal').style.display = 'none';
-    updatePricing(saved);
-  }
-};
-</script>
-
-</body>
-</html>
-
+      <h4>What’s included</h4>
+      <ul>
+        <li
