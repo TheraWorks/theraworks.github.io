@@ -2,236 +2,324 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>TheraWorks | Digital Support by Thera</title>
+<title>TheraWorks | Professional Data Support</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #f7f8f6;
-  color: #333;
-  line-height: 1.7;
+:root{
+  --terracotta:#c46a4a;
+  --terracotta-dark:#a5553b;
+  --soft:#f6f3f0;
+  --text:#333;
 }
 
-header {
-  background: linear-gradient(135deg, #7fa99b, #4f6f64);
-  color: #fff;
-  text-align: center;
-  padding: 80px 20px;
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:var(--soft);
+  color:var(--text);
+  line-height:1.7;
 }
 
-header h1 {
-  font-size: 44px;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
+/* HEADER */
+header{
+  text-align:center;
+  padding:90px 20px;
+  background:#fff;
 }
 
-header h1 span {
-  font-weight: 300;
+header h1{
+  font-size:46px;
+  font-weight:600;
+  letter-spacing:2px;
+  margin-bottom:12px;
 }
 
-header .divider {
-  width: 60px;
-  height: 2px;
-  background: #d4af37;
-  margin: 18px auto;
+.divider{
+  width:70px;
+  height:2px;
+  background:var(--terracotta);
+  margin:12px auto 18px;
 }
 
-header p {
-  font-size: 15px;
-  max-width: 720px;
-  margin: auto;
+header p{
+  font-size:15px;
+  max-width:680px;
+  margin:auto;
+  color:#555;
 }
 
-section {
-  max-width: 960px;
-  margin: auto;
-  padding: 60px 20px;
+/* SECTIONS */
+section{
+  max-width:960px;
+  margin:auto;
+  padding:70px 20px;
 }
 
-h2 {
-  color: #4f6f64;
-  margin-bottom: 20px;
+.card{
+  background:#fff;
+  padding:40px;
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+  margin-bottom:50px;
 }
 
-h3 {
-  margin-top: 0;
+h2{
+  color:var(--terracotta-dark);
+  margin-bottom:20px;
 }
 
-h4 {
-  margin-top: 26px;
-  font-size: 15px;
-  color: #4f6f64;
+/* TWO COLUMN */
+.two-column{
+  display:flex;
+  gap:40px;
+  flex-wrap:wrap;
 }
 
-.card {
-  background: #fff;
-  padding: 36px;
-  border-radius: 16px;
-  box-shadow: 0 12px 35px rgba(0,0,0,0.05);
-  margin-bottom: 45px;
+.two-column > div{
+  flex:1;
+  min-width:260px;
 }
 
-.two-column {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
+/* LIST */
+ul{
+  padding-left:18px;
 }
 
-.two-column > div {
-  flex: 1;
-  min-width: 260px;
+li{
+  margin-bottom:8px;
 }
 
-ul {
-  padding-left: 18px;
+/* PRICING */
+.price{
+  font-size:20px;
+  font-weight:600;
+  margin-bottom:10px;
+  color:var(--terracotta-dark);
 }
 
-.note {
-  font-size: 13px;
-  opacity: 0.7;
-  margin-top: 20px;
+/* FORM */
+input, textarea{
+  width:100%;
+  padding:14px;
+  margin-bottom:15px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-family:'Poppins',sans-serif;
 }
 
-/* Profile */
-.profile {
-  display: flex;
-  gap: 30px;
-  align-items: center;
-  flex-wrap: wrap;
+button{
+  background:var(--terracotta);
+  color:#fff;
+  border:none;
+  padding:14px 32px;
+  border-radius:30px;
+  cursor:pointer;
 }
 
-.profile img {
-  width: 150px;
-  border-radius: 50%;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+/* FOOTER */
+footer{
+  background:#2f2a27;
+  color:#fff;
+  text-align:center;
+  padding:25px;
+  font-size:14px;
 }
 
-/* WhatsApp */
-.whatsapp-float {
-  position: fixed;
-  width: 55px;
-  height: 55px;
-  bottom: 25px;
-  right: 25px;
-  background: #25d366;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 28px;
-  color: #fff;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  z-index: 999;
+/* POPUP */
+#client-modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
 }
 
-.whatsapp-float span {
-  line-height: 55px;
+.modal-box{
+  background:#fff;
+  padding:40px;
+  border-radius:18px;
+  max-width:360px;
+  width:90%;
+  text-align:center;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  header h1 { font-size: 32px; }
-  .profile { text-align: center; justify-content: center; }
+.modal-box button{
+  width:100%;
+  margin-top:12px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  right:25px;
+  bottom:25px;
+  width:55px;
+  height:55px;
+  background:#25d366;
+  border-radius:50%;
+  color:#fff;
+  text-align:center;
+  font-size:26px;
+  line-height:55px;
+  text-decoration:none;
+  box-shadow:0 6px 18px rgba(0,0,0,0.3);
 }
 </style>
 </head>
 
 <body>
 
+<!-- CLIENT TYPE POPUP -->
+<div id="client-modal">
+  <div class="modal-box">
+    <h3>Welcome to TheraWorks</h3>
+    <p>Please select your location so pricing can be adjusted.</p>
+    <button onclick="setClientType('indonesia')">Indonesia-based</button>
+    <button onclick="setClientType('international')">International</button>
+  </div>
+</div>
+
 <header>
-  <h1>THERA<span>WORKS</span></h1>
+  <h1>TheraWorks</h1>
   <div class="divider"></div>
-  <p>Calm, reliable digital support — handled personally.</p>
+  <p>Calm, precise, and professional data support — handled with care.</p>
 </header>
 
 <section>
 
-<!-- PROFILE -->
-<div class="card profile">
-  <img src="profile.jpg" alt="Thera">
-  <div>
-    <h2>Meet Thera</h2>
-    <p>
-      Hi, I’m <strong>Theresia</strong> — you can call me <strong>Thera</strong>.
-      I provide structured, reliable digital support for businesses that value accuracy and calm execution.
-    </p>
-    <p>
-      With over 10 years of professional experience, I personally handle each project with care,
-      confidentiality, and clear communication.
-    </p>
-  </div>
+<div class="card">
+  <h2>Meet Thera</h2>
+  <p>
+    I’m Thera — the person behind TheraWorks.
+    With over 10 years of professional experience, I support businesses
+    by handling structured data work with accuracy, discretion, and consistency.
+  </p>
+  <p>
+    My background includes finance-related data, e-commerce operations,
+    transactional records, and long-term administrative data handling.
+    Every project is handled personally with clear communication
+    and attention to detail.
+  </p>
 </div>
 
-<!-- SERVICES -->
 <div class="card">
   <h2>Services</h2>
   <ul>
-    <li>Data entry for transactions, sales, customers, or internal records</li>
-    <li>Spreadsheet setup, formatting, and organization</li>
-    <li>Data cleaning, validation, and consistency checks</li>
-    <li>PDF, document, or system-based data conversion</li>
-    <li>Ongoing administrative and digital support</li>
+    <li>Professional data entry and data processing</li>
+    <li>Financial and transaction data recording</li>
+    <li>E-commerce product, order, and customer data</li>
+    <li>Spreadsheet structuring and formatting</li>
+    <li>Data cleanup, validation, and consistency checks</li>
+    <li>Custom data-related tasks upon discussion</li>
   </ul>
 </div>
 
-<!-- WHO / WHAT -->
 <div class="card two-column">
   <div>
     <h2>Who This Is For</h2>
-    <p>
-      Business owners, teams, and professionals who need accurate,
-      dependable data support for daily operations or ongoing work.
-    </p>
+    <ul>
+      <li>Business owners who value accuracy and structure</li>
+      <li>Teams needing reliable ongoing data support</li>
+      <li>Companies handling sensitive or financial data</li>
+    </ul>
   </div>
   <div>
     <h2>What This Is Not</h2>
-    <p>
-      This service does not replace accounting, financial analysis,
-      or strategic data consulting.
-      It focuses on structured data handling and operational support.
-    </p>
+    <ul>
+      <li>Rush-based or last-minute work without planning</li>
+      <li>One-click automated services</li>
+      <li>Unstructured tasks without clear scope</li>
+    </ul>
   </div>
 </div>
 
-<!-- PRICING INDONESIA -->
+<div class="card">
+  <h2>Why Work With Thera</h2>
+  <ul>
+    <li>Over a decade of hands-on professional experience</li>
+    <li>Calm, reliable, and detail-oriented work style</li>
+    <li>Clear communication and accountability</li>
+    <li>All client data handled with confidentiality and care</li>
+  </ul>
+</div>
+
+<!-- PRICING -->
 <div class="card pricing indonesia">
   <h2>Pricing — Indonesia-based Clients</h2>
 
   <div class="two-column">
-
-    <!-- Starter -->
     <div>
-      <h3>Starter Support</h3>
-      <p><strong>Monthly:</strong> from IDR 1.200.000<br>
-      <strong>Project-based:</strong> from IDR 75.000</p>
-
-      <h4>What’s included</h4>
+      <h3>Starter Package</h3>
+      <p class="price">IDR 2.500.000 / month</p>
       <ul>
-        <li>Accurate data entry from provided sources</li>
-        <li>Structured spreadsheets with consistent formatting</li>
-        <li>Light data cleaning and organization</li>
+        <li>Routine data entry tasks</li>
         <li>Single-source data handling</li>
-        <li>Basic accuracy check</li>
-        <li>Organized file naming and folders</li>
-      </ul>
-
-      <h4>Volume guide</h4>
-      <ul>
-        <li>Small to moderate datasets</li>
-        <li>Single-source data</li>
-        <li>Routine or recurring entries</li>
-        <li>Up to a few hundred records per task</li>
+        <li>Structured spreadsheets</li>
+        <li>Basic validation</li>
+        <li>Small to medium data volume</li>
       </ul>
     </div>
 
-    <!-- Pro -->
     <div>
-      <h3>Pro Data Support</h3>
-      <p><strong>Monthly:</strong> from IDR 3.000.000<br>
-      <strong>Project-based:</strong> from IDR 300.000+</p>
-
-      <h4>What’s included</h4>
+      <h3>Pro Package</h3>
+      <p class="price">IDR 4.500.000 / month</p>
       <ul>
-        <li
+        <li>High-volume or multi-source data</li>
+        <li>Financial or transactional records</li>
+        <li>Cross-checking and validation</li>
+        <li>Priority handling</li>
+        <li>Larger and ongoing data volume</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="card pricing international" style="display:none;">
+  <h2>Pricing — International Clients</h2>
+  <p class="price">$7 / hour</p>
+  <p>$225 / week or $800 / month</p>
+  <p>Up to 40 hours per week. Final scope discussed before starting.</p>
+</div>
+
+<div class="card">
+  <h2>Contact</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="5" placeholder="Tell me about your project"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+
+</section>
+
+<footer>
+© 2026 TheraWorks
+</footer>
+
+<a href="https://wa.me/62XXXXXXXXXX" class="whatsapp" target="_blank">💬</a>
+
+<script>
+function setClientType(type){
+  localStorage.setItem('clientType', type);
+  document.getElementById('client-modal').style.display='none';
+  document.querySelectorAll('.pricing').forEach(p=>p.style.display='none');
+  document.querySelector('.pricing.'+type).style.display='block';
+}
+
+window.onload=function(){
+  const saved=localStorage.getItem('clientType');
+  if(saved){
+    document.getElementById('client-modal').style.display='none';
+    document.querySelector('.pricing.'+saved).style.display='block';
+  }
+}
+</script>
+
+</body>
+</html>
