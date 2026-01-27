@@ -181,6 +181,43 @@ ul{
 li{
   margin-bottom:8px;
 }
+  
+.portfolio {
+  padding-top: 50px;
+}
+
+.section-intro {
+  max-width: 600px;
+  margin: 0 auto 35px;
+  font-size: 15px;
+  color: #6f625c;
+  text-align: center;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.portfolio-item {
+  background: #ffffff;
+  padding: 26px;
+  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+}
+
+.portfolio-item h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #6b3f2d; /* terracotta */
+}
+
+.portfolio-item p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #4b4541;
+}
 
 /* PRICING */
 .price{
@@ -370,6 +407,41 @@ footer{
   Services are flexible and tailored based on data volume,
   complexity, and workflow requirements.
 </p>
+  
+<section class="section portfolio">
+  <h2>Selected Work</h2>
+  <p class="section-intro">
+    A brief overview of the type of work I’ve supported across different industries.
+  </p>
+
+  <div class="portfolio-grid">
+
+    <div class="portfolio-item">
+      <h3>Financial Data Entry & Reconciliation</h3>
+      <p>
+        Organized and validated transaction records for internal reporting,
+        ensuring consistency and accuracy across monthly data.
+      </p>
+    </div>
+
+    <div class="portfolio-item">
+      <h3>E-commerce Product & Order Data</h3>
+      <p>
+        Managed product listings, order records, and customer data
+        to support daily operations and reporting needs.
+      </p>
+    </div>
+
+    <div class="portfolio-item">
+      <h3>Spreadsheet Cleanup & Structuring</h3>
+      <p>
+        Cleaned, standardized, and restructured large datasets
+        into clear, usable formats for ongoing business use.
+      </p>
+    </div>
+
+  </div>
+</section>
 
 <div class="card two-column">
   <div>
