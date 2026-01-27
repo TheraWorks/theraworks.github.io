@@ -14,6 +14,33 @@
   --soft:#f6f3f0;
   --text:#333;
 }
+  
+<script>
+function setClientType(type) {
+  localStorage.setItem('clientType', type);
+  document.getElementById('client-modal').style.display = 'none';
+  updatePricing(type);
+}
+
+function updatePricing(type) {
+  document.querySelectorAll('.pricing').forEach(p => {
+    p.style.display = 'none';
+  });
+
+  const activePricing = document.querySelector('.pricing.' + type);
+  if (activePricing) {
+    activePricing.style.display = 'block';
+  }
+}
+
+window.onload = function () {
+  const savedType = localStorage.getItem('clientType');
+  if (savedType) {
+    document.getElementById('client-modal').style.display = 'none';
+    updatePricing(savedType);
+  }
+};
+</script>
 
 body{
   margin:0;
@@ -296,43 +323,47 @@ footer{
 </div>
 
 <!-- PRICING -->
-<div class="card pricing indonesia">
-  <h2>Pricing — Indonesia-based Clients</h2>
+<div class="pricing indonesia" style="display:none;">
+  <h3>Indonesia-Based Clients</h3>
 
-  <div class="two-column">
-    <div>
-      <h3>Starter Package</h3>
-      <p class="price">IDR 2.500.000 / month</p>
+  <div class="pricing-grid">
+    <div class="card">
+      <h4>Starter Package</h4>
+      <p class="price">IDR 2,500,000 / month</p>
       <ul>
-        <li>Routine data entry tasks</li>
-        <li>Single-source data handling</li>
-        <li>Structured spreadsheets</li>
-        <li>Basic validation</li>
-        <li>Small to medium data volume</li>
+        <li>Up to 800–1,000 rows of structured data</li>
+        <li>Spreadsheet organization & formatting</li>
+        <li>Basic data validation</li>
+        <li>Weekly progress updates</li>
       </ul>
     </div>
 
-    <div>
-  <h3>Pro Package</h3>
-  <p class="price">IDR 4.500.000 / month</p>
-
-  <ul>
-    <li>High-volume or multi-source data handling</li>
-    <li>Finance and transaction-related records</li>
-    <li>Cross-checking and validation</li>
-    <li>Priority handling</li>
-    <li>Larger and ongoing data volume</li>
-    <li>More flexibility for custom requests</li>
-  </ul>
-</div>
+    <div class="card">
+      <h4>Pro Package</h4>
+      <p class="price">IDR 4,500,000 / month</p>
+      <ul>
+        <li>Up to 2,000–2,500 rows of data</li>
+        <li>Financial & transaction data handling</li>
+        <li>Deeper validation & cross-checking</li>
+        <li>Priority handling</li>
+      </ul>
+    </div>
   </div>
 </div>
 
-<div class="card pricing international" style="display:none;">
-  <h2>Pricing — International Clients</h2>
-  <p class="price">$7 / hour</p>
-  <p>$225 / week or $800 / month</p>
-  <p>Up to 40 hours per week. Final scope discussed before starting.</p>
+<div class="pricing international" style="display:none;">
+  <h3>International Clients</h3>
+
+  <div class="card">
+    <p class="price">From $7 per hour</p>
+    <ul>
+      <li>$225 per week (up to 40 hours)</li>
+      <li>$800 per month (up to 160 hours)</li>
+      <li>Professional data entry & data support</li>
+      <li>Finance, e-commerce, or operational data</li>
+      <li>Clear task tracking & regular updates</li>
+    </ul>
+  </div>
 </div>
 
 <div class="card">
